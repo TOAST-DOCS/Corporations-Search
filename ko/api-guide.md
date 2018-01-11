@@ -318,13 +318,12 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/{appkey}/reqlists?p=
 
 [Example Request]
 
-```
-{"custNo":1
+<pre><code>{"custNo":1
 ,"crtKey":"qaz!@wsx"}
 
 Json데이터를 AES256 함호화 처리후, URLEncoder(UTF-8) 처리된 데이터
-3Tm2TS3ynvXw3jcgh1SzQcMIBA2EIRp%2FheQSAsWSXHTP0TODL%2FYEL1Iml3Qn1CWn
-```
+3Tm2TS3ynvXw3jcgh1SzQcMIBA2EIRp%2FheQSAsWSXHTP0TODL%2FYEL1Iml3Qn1CWn</code></pre>
+
 
 [Example Request URL]
 

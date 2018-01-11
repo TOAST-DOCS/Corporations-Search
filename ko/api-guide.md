@@ -378,6 +378,7 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/1sdaf3rs34d2/reqlist
 ### AES 256 암호화
 
 > 암호화모듈 개발시 CBC, 패딩은 PKCS5Padding 사용
-> Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
+> [Example] 
+Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding")
 
 > 문자셋 Encoding은 UTF8을 사용

@@ -1,1 +1,1 @@
-## Search > Corporation Search > 릴리스 노트
+## Corporation Search 릴리스 노트

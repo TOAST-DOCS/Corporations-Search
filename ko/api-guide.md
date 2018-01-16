@@ -1,4 +1,4 @@
-## Corporation Search API 가이드
+## Search > Corporation Search > API 가이드
 
 다음과 같은 API 호출을 통해 거래처 휴/폐업조회 서비스를 이용할 수 있습니다.
 

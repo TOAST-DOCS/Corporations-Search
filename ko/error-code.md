@@ -1,4 +1,4 @@
-## Corporation Search 오류 코드
+## Search > Corporation Search > 오류 코드
 
 API 사용시 에러코드는 다음을 참고 하시면 됩니다.
 

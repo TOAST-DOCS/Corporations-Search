@@ -1,4 +1,4 @@
-## Corporation Search 릴리스 노트
+## Search > Corporation Search > 릴리스 노트
 
 ### 2017.06.25
 #### 기능 변경

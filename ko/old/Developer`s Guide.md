@@ -26,7 +26,7 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/{appkey}/requests?p=
 |이름|	자료형|	설명|
 |---|---|---|
 |custNo|	long|	고객번호|
-|cryKey|	String|	고객인증키|
+|crtKey|	String|	고객인증키|
 |bnoList|	String|	사업자등록번호 (복수개가능)|
 
 [Example Request]
@@ -92,7 +92,7 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/{appkey}/verificatio
 |이름|	자료형|	설명|
 |---|---|---|
 |custNo|	long|	고객번호|
-|cryKey|	String|	고객인증키|
+|crtKey|	String|	고객인증키|
 |reqNo|	long|	요청번호|
 
 [Example Request]
@@ -156,7 +156,7 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/{appkey}/results?p={
 |이름|	자료형|	설명|
 |---|---|---|
 |custNo|	long|	고객번호|
-|cryKey|	String|	고객인증키|
+|crtKey|	String|	고객인증키|
 |reqNo|	long|	요청번호|
 
 [Example Request]
@@ -239,7 +239,7 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/{appkey}/recent?p={p
 |이름|	자료형|	설명|
 |---|---|---|
 |custNo|	long|	고객번호|
-|cryKey|	String|	고객인증키|
+|crtKey|	String|	고객인증키|
 
 [Example Request]
 
@@ -301,7 +301,7 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/{appkey}/reqlists?p=
 |이름|	자료형|	설명|
 |---|---|---|
 |custNo|	long|	고객번호|
-|cryKey|	String|	고객인증키|
+|crtKey|	String|	고객인증키|
 
 [Example Request]
 

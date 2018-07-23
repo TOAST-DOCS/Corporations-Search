@@ -35,7 +35,7 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/{appkey}/requests?p=
 ,"crtKey":"qaz!@wsx"
 ,"bnoList":["1234567890","0123456789","9012345678"]}
 
-Json데이터를 AES256 함호화 처리후, URLEncoder(UTF-8) 처리된 데이터
+Json데이터를 AES256 암호화 처리후, URLEncoder(UTF-8) 처리된 데이터
 rteo7fjjhGlVznybl239YSngEb2Y3VHOSJaM12AGasdyI1Y0pclSFnPo8uD8eHLFJ41AigDRpsXW36aBQoJXkTFhVeTQ4CMJFg8qKUXj%2Bl%2BwxjdkDJxVdCkJlh4Nnvxm
 ```
 
@@ -104,7 +104,7 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/{appkey}/verificatio
 ,"crtKey":"qaz!@wsx"
 ,"reqNo":58}
 
-Json데이터를 AES256 함호화 처리후, URLEncoder(UTF-8) 처리된 데이터
+Json데이터를 AES256 암호화 처리후, URLEncoder(UTF-8) 처리된 데이터
 TSNRsStai0hQUM5m40dyDxIJsW5TON7QqVYjjhCIjBUKbMFqmiM1xZ8ND5%2Buo5xd
 ```
 
@@ -172,7 +172,7 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/{appkey}/results?p={
 ,"crtKey":"qaz!@wsx"
 ,"reqNo":58}
 
-Json데이터를 AES256 함호화 처리후, URLEncoder(UTF-8) 처리된 데이터
+Json데이터를 AES256 암호화 처리후, URLEncoder(UTF-8) 처리된 데이터
 TSNRsStai0hQUM5m40dyDxIJsW5TON7QqVYjjhCIjBUKbMFqmiM1xZ8ND5%2Buo5xd
 ```
 
@@ -257,7 +257,7 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/{appkey}/recent?p={p
 {"custNo":1
 ,"crtKey":"qaz!@wsx"}
 
-Json데이터를 AES256 함호화 처리후, URLEncoder(UTF-8) 처리된 데이터
+Json데이터를 AES256 암호화 처리후, URLEncoder(UTF-8) 처리된 데이터
 3Tm2TS3ynvXw3jcgh1SzQcMIBA2EIRp%2FheQSAsWSXHTP0TODL%2FYEL1Iml3Qn1CWn
 ```
 
@@ -321,7 +321,7 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/{appkey}/reqlists?p=
 <pre><code>{"custNo":1
 ,"crtKey":"qaz!@wsx"}
 
-Json데이터를 AES256 함호화 처리후, URLEncoder(UTF-8) 처리된 데이터
+Json데이터를 AES256 암호화 처리후, URLEncoder(UTF-8) 처리된 데이터
 3Tm2TS3ynvXw3jcgh1SzQcMIBA2EIRp%2FheQSAsWSXHTP0TODL%2FYEL1Iml3Qn1CWn</code></pre>
 
 

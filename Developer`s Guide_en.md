@@ -25,7 +25,7 @@ Temporary/Permanently Closed Client Request
 | Name    | Data type | Description                                              |
 |---------|-----------|----------------------------------------------------------|
 | custNo  | long      | Customer number                                          |
-| cryKey  | String    | Customer authentication key                              |
+| crtKey  | String    | Customer authentication key                              |
 | bnoList | String    | Business registration number (Multiple numbers possible) |
 
 \[Example Request\]
@@ -84,7 +84,7 @@ Check the Status of Temporary/Permanently Closed Client Request
 | Name   | Data type | Description                 |
 |--------|-----------|-----------------------------|
 | custNo | long      | Customer number             |
-| cryKey | String    | Customer authentication key |
+| crtKey | String    | Customer authentication key |
 | reqNo  | long      | Request number              |
 
 \[Example Request\]
@@ -141,7 +141,7 @@ Receive Result Data on Temporary/Permanently Closed Client Request
 | Name   | Data type | Description                 |
 |--------|-----------|-----------------------------|
 | custNo | long      | Customer number             |
-| cryKey | String    | Customer authentication key |
+| crtKey | String    | Customer authentication key |
 | reqNo  | long      | Request number              |
 
 \[Example Request\]
@@ -215,7 +215,7 @@ Check Request Number of Temporary/Permanently Closed Clients Recently Requested
 | Name   | Data type | Description                 |
 |--------|-----------|-----------------------------|
 | custNo | long      | Customer number             |
-| cryKey | String    | Customer authentication key |
+| crtKey | String    | Customer authentication key |
 
 \[Example Request\]
 
@@ -270,7 +270,7 @@ Check Request History of Temporary/Permanently Closed Clients within a Week
 | Name   | Data type | Description                 |
 |--------|-----------|-----------------------------|
 | custNo | long      | Customer number             |
-| cryKey | String    | Customer authentication key |
+| crtKey | String    | Customer authentication key |
 
 \[Example Request\]
 

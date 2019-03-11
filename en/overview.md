@@ -4,7 +4,7 @@
 본 조회서비스는 정확한 세무처리와 거래 상대방이 세금계산서를 교부할 수 없는 휴.폐업자 또는 간이과세자로 의심되는 경우, 납세자가 이를 확인하여 불의의 피해를 받지 않도록 하기 위한 서비스 입니다.
 
 ### 서비스 구성도
-![](http://static.toastoven.net/prod_corporation_search/img_01.jpg)
+![](http://static.toastoven.net/prod_corporation_search/Corporation Search_overview01_en.png)
 
 ### 제공 서비스
 

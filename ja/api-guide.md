@@ -1,10 +1,10 @@
-## Search > Corporation Search > APIガイド
+## Search > Corporation Search > API Guide
 
-次のようなAPIを呼び出して、取引先の休廃業照会サービスを利用できます。
+다음과 같은 API 호출을 통해 거래처 휴/폐업조회 서비스를 이용할 수 있습니다.
 
 <br/>
 
-### 取引先の休廃業要請
+### 거래처 휴/페업 요청
 ------------------------------------
 [HTTP request]
 
@@ -15,18 +15,18 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/{appkey}/requests?p=
 
 [Path Parameters]
 
-|名前|	データ型|	説明|
+|이름|	자료형|	설명|
 |---|---|---|
-|appkey|	String| アプリケーションキー(AppKey) |
-|p|	String| 暗号化されたリクエスト本文パラメータ(request body parameter) |
+|appkey|	String|	AppKey|
+|p|	String|	암호화된 Request body Parameter|
 
 [Request body Parameters]
 
-|名前|	データ型|	説明|
+|이름|	자료형|	설명|
 |---|---|---|
-|custNo|	long| 顧客番号(TOAST Consoleページ内にある) |
-|crtKey|	String| 顧客認証キー(TOAST Consoleページ内にある) |
-|bnoList|	String| 事業者登録番号(複数可能) |
+|custNo|	long|	고객번호 (Console 페이지 내 있음)|
+|crtKey|	String|	고객인증키 (Console 페이지 내 있음)|
+|bnoList|	String|	사업자등록번호 (복수개가능)|
 
 [Example Request]
 
@@ -35,7 +35,7 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/{appkey}/requests?p=
 ,"crtKey":"qaz!@wsx"
 ,"bnoList":["1234567890","0123456789","9012345678"]}
 
-JSONデータをAES256暗号化処理後、 URLEncoder(UTF-8)処理されたデータ
+Json데이터를 AES256 암호화 처리후, URLEncoder(UTF-8) 처리된 데이터
 rteo7fjjhGlVznybl239YSngEb2Y3VHOSJaM12AGasdyI1Y0pclSFnPo8uD8eHLFJ41AigDRpsXW36aBQoJXkTFhVeTQ4CMJFg8qKUXj%2Bl%2BwxjdkDJxVdCkJlh4Nnvxm
 ```
 
@@ -51,7 +51,7 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/1sdaf3rs34d2/request
 {
     "header": {
         "resultCode": 0,
-        "resultMessage": "要請に成功しました。",
+        "resultMessage": "정상적으로 요청되었습니다.",
         "successful": true
     },
     "data": {
@@ -64,15 +64,15 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/1sdaf3rs34d2/request
 
 [Response]
 
-|名前|	データ型|	説明|
+|이름|	자료형|	설명|
 |---|---|---|
-|reqNo|	long| 要請番号 |
-|resultCnt|	int| 要請した事業者登録番号の個数 |
-|reqDate|	String|	要請した日時|
+|reqNo|	long|	요청번호|
+|resultCnt|	int|	요청된 사업자등록번호 갯수|
+|reqDate|	String|	요청된 일시|
 
 <br/>
 
-### 取引先の休廃業要請状態の確認
+### 거래처 휴/페업 요청 상태확인
 ------------------------------------
 
 [HTTP request]
@@ -84,18 +84,18 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/{appkey}/verificatio
 
 [Path Parameters]
 
-|名前|	データ型|	説明|
+|이름|	자료형|	설명|
 |---|---|---|
-|appkey|	String| アプリケーションキー(AppKey) |
-|p|	String|	暗号化されたリクエスト本文パラメータ(request body parameter)|
+|appkey|	String|	AppKey|
+|p|	String|	암호화된 Request body Parameter|
 
 [Request body Parameters]
 
-|名前|	データ型|	説明|
+|이름|	자료형|	설명|
 |---|---|---|
-|custNo|	long|	顧客番号(TOAST Consoleページ内にある)|
-|crtKey|	String|	顧客認証キー(TOAST Consoleページ内にある)|
-|reqNo|	long|	要請番号|
+|custNo|	long|	고객번호 (Console 페이지 내 있음)|
+|crtKey|	String|	고객인증키 (Console 페이지 내 있음)|
+|reqNo|	long|	요청번호|
 
 [Example Request]
 
@@ -104,7 +104,7 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/{appkey}/verificatio
 ,"crtKey":"qaz!@wsx"
 ,"reqNo":58}
 
-JSONデータをAES256暗号化処理後、 URLEncoder(UTF-8)処理されたデータ
+Json데이터를 AES256 암호화 처리후, URLEncoder(UTF-8) 처리된 데이터
 TSNRsStai0hQUM5m40dyDxIJsW5TON7QqVYjjhCIjBUKbMFqmiM1xZ8ND5%2Buo5xd
 ```
 
@@ -120,7 +120,7 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/1sdaf3rs34d2/verific
 {
     "header": {
         "resultCode": 0,
-        "resultMessage": "要請に成功しました。",
+        "resultMessage": "정상적으로 요청되었습니다.",
         "successful": true
     },
     "data": {
@@ -132,14 +132,14 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/1sdaf3rs34d2/verific
 
 [Response]
 
-|名前|	データ型|	説明|
+|이름|	자료형|	설명|
 |---|---|---|
-|reqNo|	long|	要請番号|
-|resultDate|	String|	完了日時|
+|reqNo|	long|	요청번호|
+|resultDate|	String|	완료일시|
 
 <br/>
 
-### 取引先の休廃業要請結果データを受け取る
+### 거래처 휴/페업 요청 결과데이터 받기
 ------------------------------------
 
 [HTTP request]
@@ -151,19 +151,19 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/{appkey}/results?p={
 
 [Path Parameters]
 
-|名前|	データ型|	説明|
+|이름|	자료형|	설명|
 |---|---|---|
-|appkey|	String|	アプリケーションキー(AppKey)|
-|p|	String| 暗号化されたリクエスト本文パラメータ(request body parameter) |
+|appkey|	String|	AppKey|
+|p|	String|	암호화된 Request body Parameter|
 
 [Request body Parameters]
 
-|名前|	データ型|	説明|
+|이름|	자료형|	설명|
 |---|---|---|
-|custNo|	long|	顧客番号(TOAST Consoleページ内にある)|
-|crtKey|	String|	顧客認証キー(TOAST Consoleページ内にある)|
-|reqNo|	long|	要請番号|
-|scn| String [Y,N] | 取引先名の照会フラグ[必須値ではない] |
+|custNo|	long|	고객번호 (Console 페이지 내 있음)|
+|crtKey|	String|	고객인증키 (Console 페이지 내 있음)|
+|reqNo|	long|	요청번호|
+|scn|	String [Y,N]|	거래처명 조회Flag [필수값 아님]|
 
 [Example Request]
 
@@ -172,7 +172,7 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/{appkey}/results?p={
 ,"crtKey":"qaz!@wsx"
 ,"reqNo":58}
 
-JSONデータをAES256暗号化処理後、 URLEncoder(UTF-8)処理されたデータ
+Json데이터를 AES256 암호화 처리후, URLEncoder(UTF-8) 처리된 데이터
 TSNRsStai0hQUM5m40dyDxIJsW5TON7QqVYjjhCIjBUKbMFqmiM1xZ8ND5%2Buo5xd
 ```
 
@@ -188,46 +188,46 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/1sdaf3rs34d2/results
 {
     "header": {
         "resultCode": 0,
-        "resultMessage": "照会要請が完了しました。",
+        "resultMessage": "조회요청이 완료되었습니다.",
         "successful": true
     },
     "data": {
         "reqNo": 58,
         "resultCnt": 8,
         "resultDate": "2015-11-11 10:10:10",
-        "resultEncrytData": "8LAT2G8kMp1rFby+n0gWIDYhpnO/sDSU2zMyp0tLnb9Y901/+sw5agirJsWgpJm6s81R1uwOyC+zzBOG98H+WrC1zAMHX1U5tcpbgF+RSeQdx//8r6Af1NXQ3FZ/IsVJnhvttKEqnpFVzGt11zhNz1Tunjㅍ4d+N+MWYEr7BW2izaQXxRlZ0HX8X8lEiJp7JutKO9BKpZbAtR471SsDAtT6gS845CayO2ojA6ujpqtF/v/ZQei+0KEF10eBwutGTmn1i891E7K/NzdsQbu8qeau7Ksx+QrLSm0SaPHrK71XFjincB/xxXp12xc1zsZK3drQQ/U2xbiAY3CPqTXdNjWpj/iBRZaagQcC6VVvlIrMJ4t4O+cr7xsW5iMgmcpg75dPpsa4pkG8V0S9YKGg24TH+qfM7RZ9Xh7m+OSZMQRtbFT4fLLawB4E7mMKRPCBjmR3elQ0vVrNhWZ8kFt+a8C4D+EdWTIplvkS13tKkFFCF4=",
+        "resultEncrytData": "8LAT2G8kMp1rFby+n0gWIDYhpnO/sDSU2zMyp0tLnb9Y901/+sw5agirJsWgpJm6s81R1uwOyC+zzBOG98H+WrC1zAMHX1U5tcpbgF+RSeQdx//8r6Af1NXQ3FZ/IsVJnhvttKEqnpFVzGt11zhNz1Tunj4d+N+MWYEr7BW2izaQXxRlZ0HX8X8lEiJp7JutKO9BKpZbAtR471SsDAtT6gS845CayO2ojA6ujpqtF/v/ZQei+0KEF10eBwutGTmn1i891E7K/NzdsQbu8qeau7Ksx+QrLSm0SaPHrK71XFjincB/xxXp12xc1zsZK3drQQ/U2xbiAY3CPqTXdNjWpj/iBRZaagQcC6VVvlIrMJ4t4O+cr7xsW5iMgmcpg75dPpsa4pkG8V0S9YKGg24TH+qfM7RZ9Xh7m+OSZMQRtbFT4fLLawB4E7mMKRPCBjmR3elQ0vVrNhWZ8kFt+a8C4D+EdWTIplvkS13tKkFFCF4=",
 }
 }
 ```
 
 [Response]
 
-|名前|	データ型|	説明|
+|이름|	자료형|	설명|
 |---|---|---|
-|reqNo|	long|	要請番号|
-|resultCnt|	int| 完了データ個数 |
-|resultDate|	String| 完了日時 |
-|resultEncrytData|	String| 暗号化された休廃業情報データ |
+|reqNo|	long|	요청번호|
+|resultCnt|	int|	완료데이터 갯수|
+|resultDate|	String|	완료일자|
+|resultEncrytData|	String|	암호화된 휴페업정보데이터|
 
-resultEncrytData該当データのURLDecoder処理後、 AES256復号化処理
+resultEncrytData 해당데이터의 URLDecoder 처리 후, AES256 복호화 처리
 
 ```
-[{"bno":"1234567890","bnoCd":"01","bnoCont":"付加価値税一般課税者です。","bnoDate":"2015-11-11 10:10:10"}
-,{"bno":"1234567890","bnoCd":"01","bnoCont":"付加価値税一般課税者です。","bnoDate":"2015-11-11 10:10:10"}
-,{"bno":"1234567890","bnoCd":"01","bnoCont":"付加価値税一般課税者です。","bnoDate":"2015-11-10 10:10:10"}]
+[{"bno":"1234567890","bnoCd":"01","bnoCont":"부가가치세 일반과세자 입니다.","bnoDate":"2015-11-11 10:10:10"}
+,{"bno":"1234567890","bnoCd":"01","bnoCont":"부가가치세 일반과세자 입니다.","bnoDate":"2015-11-11 10:10:10"}
+,{"bno":"1234567890","bnoCd":"01","bnoCont":"부가가치세 일반과세자 입니다.","bnoDate":"2015-11-10 10:10:10"}]
 ```
 
-|名前|	データ型|	説明|
+|이름|	자료형|	설명|
 |---|---|---|
-|bno|	String|	事業者登録番号|
-|bnoCd|	String| 結果コード |
-|bnoCont|	String| 照会結果 |
-|bnoDate|	String| 照会日 |
-|custNm|	String| 取引先名(scnがYの場合のみ含まれる) |
+|bno|	String|	사업자등록번호|
+|bnoCd|	String|	결과결과코드|
+|bnoCont|	String|	조회결과|
+|bnoDate|	String|	조회날자|
+|custNm|	String|	거래처명 (scn이 Y인경우만 포함됨)|
 
 <br/>
 
-### 取引先の休廃業直近で要請中の要請番号を確認
+### 거래처 휴/페업 최근 요청중인 요청번호 확인
 ------------------------------------
 
 [HTTP request]
@@ -239,17 +239,17 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/{appkey}/recent?p={p
 
 [Path Parameters]
 
-|名前|	データ型|	説明|
+|이름|	자료형|	설명|
 |---|---|---|
-|appkey|	String| アプリケーションキー(AppKey) |
-|p|	String| 暗号化されたリクエスト本文パラメータ(request body parameter) |
+|appkey|	String|	AppKey|
+|p|	String|	암호화된 Request body Parameter|
 
 [Request body Parameters]
 
-|名前|	データ型|	説明|
+|이름|	자료형|	설명|
 |---|---|---|
-|custNo|	long|	顧客番号(TOAST Consoleページ内にある)|
-|crtKey|	String|	顧客認証キー(TOAST Consoleページ内にある)|
+|custNo|	long|	고객번호 (Console 페이지 내 있음)|
+|crtKey|	String|	고객인증키 (Console 페이지 내 있음)|
 
 [Example Request]
 
@@ -257,7 +257,7 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/{appkey}/recent?p={p
 {"custNo":1
 ,"crtKey":"qaz!@wsx"}
 
-JSONデータをAES256暗号化処理後、 URLEncoder(UTF-8)処理されたデータ
+Json데이터를 AES256 암호화 처리후, URLEncoder(UTF-8) 처리된 데이터
 3Tm2TS3ynvXw3jcgh1SzQcMIBA2EIRp%2FheQSAsWSXHTP0TODL%2FYEL1Iml3Qn1CWn
 ```
 
@@ -273,7 +273,7 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/1sdaf3rs34d2/verific
 {
     "header": {
         "resultCode": 0,
-        "resultMessage": "要請に成功しました。",
+        "resultMessage": "정상적으로 요청되었습니다.",
         "successful": true
     },
     "data": {
@@ -285,14 +285,14 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/1sdaf3rs34d2/verific
 
 [Response]
 
-|名前|	データ型|	説明|
+|이름|	자료형|	설명|
 |---|---|---|
-|recentReqNo|	long|	最終要請番号|
-|recentReqDate|	String|	最終要請日時|
+|recentReqNo|	long|	최근요청번호|
+|recentReqDate|	String|	최근요청일시|
 
 <br/>
 
-### 取引先の休廃業の一週間以内の要請内容を確認
+### 거래처 휴/페업 최근 일주일내 요청내역 확인
 ------------------------------------
 
 [HTTP request]
@@ -304,23 +304,24 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/{appkey}/reqlists?p=
 
 [Path Parameters]
 
-|名前|	データ型|	説明|
+|이름|	자료형|	설명|
 |---|---|---|
-|appkey|	String| アプリケーションキー(AppKey) |
-|p|	String| 暗号化されたリクエスト本文パラメータ(request body parameter) |
+|appkey|	String|	AppKey|
+|p|	String|	암호화된 Request body Parameter|
 
 [Request body Parameters]
 
-|名前|	データ型|	説明|
+|이름|	자료형|	설명|
 |---|---|---|
-|custNo|	long|	顧客番号(TOAST Consoleページ内にある)|
-|crtKey|	String|	顧客認証キー(TOAST Consoleページ内にある)|
+|custNo|	long|	고객번호 (Console 페이지 내 있음)|
+|crtKey|	String|	고객인증키 (Console 페이지 내 있음)|
 
 [Example Request]
 
 <pre><code>{"custNo":1
 ,"crtKey":"qaz!@wsx"}
-JSONデータをAES256暗号化した後、 URLEncoder(UTF-8)処理されたデータ
+
+Json데이터를 AES256 암호화 처리후, URLEncoder(UTF-8) 처리된 데이터
 3Tm2TS3ynvXw3jcgh1SzQcMIBA2EIRp%2FheQSAsWSXHTP0TODL%2FYEL1Iml3Qn1CWn</code></pre>
 
 
@@ -336,7 +337,7 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/1sdaf3rs34d2/reqlist
 {
     "header": {
         "resultCode": 0,
-        "resultMessage": "要請に成功しました。",
+        "resultMessage": "정상적으로 요청되었습니다.",
         "successful": true
     },
     "data": {
@@ -348,35 +349,35 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/1sdaf3rs34d2/reqlist
 
 [Response]
 
-|名前|	データ型|	説明|
+|이름|	자료형|	설명|
 |---|---|---|
-|reqNo|	long|	要請番号|
-|reqStatCd|	String|	要請状態|
-|reqYmdt|	String|	要請日時|
-|trtYmdt|	String|	結果日時|
-|reqCnt|	int|	要請個数|
+|reqNo|	long|	요청번호|
+|reqStatCd|	String|	요청상태|
+|reqYmdt|	String|	요청일시|
+|trtYmdt|	String|	결과일시|
+|reqCnt|	int|	요청갯수|
 
 <br/>
 
-## 参考事項
-### 結果照会コード表
-|コード値|	結果値|
+## 참고사항
+### 결과조회코드표
+|코드값|	결과값|
 |---|---|
-|00|	事業を行っていない事業者|
-|01|	付加価値税一般課税者|
-|02|	付加価値税簡易課税者|
-|03|	付加価値税免除事業者|
-|04| 収益事業を営まない非営利法人または固有番号が付与された団体。国家機関 |
-|05|	休業者|
-|06|	廃業者|
-|09|	その他|
+|00|	사업을 하고 있지 않는 사업자|
+|01|	부가가치세 일반과세자|
+|02|	부가가치세 간이과세자|
+|03|	부가가치세 면세사업자|
+|04|	수익사업을 영위하지 않는 비영리법인이거나 고유번호가 부여된 단체.국가기관|
+|05|	휴업자|
+|06|	폐업자|
+|09|	기타|
 
 <br/>
 
-### AES 256暗号化
+### AES 256 암호화
 
-> 暗号化モジュール開発時、CBC、パディングはPKCS5Paddingを使用
+> 암호화모듈 개발시 CBC, 패딩은 PKCS5Padding 사용
 > [Example] 
 Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding")
 
-> 文字コード(character set)エンコードはUTF-8を使用
+> 문자셋 Encoding은 UTF8을 사용

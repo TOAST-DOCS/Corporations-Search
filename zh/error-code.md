@@ -1,21 +1,23 @@
-## Search > Corporation Search > Error Code
+## Search > Corporation Search > Error Codes 
 
-API 사용시 에러코드는 다음을 참고 하시면 됩니다.
-
+Using APIs may return error codes as follows: 
 <br/>
 
-### 응답코드표
-|응답코드|설명|
+### Error Codes
+|Error Code|Description|
 |---|---|
-|0|성공|
-|-1006|해당 AppKey의 등록된 사용자가 없습니다.|
-|-1008|지정한 날짜 형식이 잘못되었습니다.|
-|-1201|요청한 거래처가 없습니다.|
-|-1202|인증된 사용자가 아닙니다.|
-|-1203|사업자조회가 처리중입니다.|
-|-1204|요청된 내역이 없습니다.|
-|-1205|잘못된 요청번호 입니다.|
-|-1206|잘못된 사업자번호() 입니다.|
-|-1207|존재하지 않는 요청번호 입니다.|
-|-1208|최근7일간 요청내역이 없습니다.|
-|-1209|해당 일자는 이미 스크래핑이 완료되었습니다.|
+|0|Successful|
+|-1002|Error in JSON specifications|
+|-1003|Error in decryption and others|
+|-1006|There is no user registered in the appkey.|
+|-1008|Invalid format of specified date.|
+|-1201|No business is requested.|
+|-1202|Not an authenticated user.|
+|-1203|Querying business owner.|
+|-1204|There is no history of request.|
+|-1205|Invalid request number.|
+|-1206|Invalid business registration number.|
+|-1207|The request number does not exist.|
+|-1208|There is no history of request for the recent 7 days.|
+|-1209|The date/time is already scrapped.|
+

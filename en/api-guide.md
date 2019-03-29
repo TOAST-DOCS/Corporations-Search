@@ -1,13 +1,12 @@
 ## Search > Corporation Search > API Guide
 
-다음과 같은 API 호출을 통해 거래처 휴/폐업조회 서비스를 이용할 수 있습니다.
-(*API 사용을 위하여 고객사의 IP를 등록요청을 주셔야 합니다.)
+By calling APIs as below, closure or cessation of business operations can be queried. 
 
 <br/>
 
-### 거래처 휴/페업 요청
+### Request for Query of Business Closure/Cessation
 ------------------------------------
-[HTTP request]
+[HTTP Request]
 
 ```
 POST   [Content-Type : application/x-www-form-urlencoded]
@@ -16,43 +15,43 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/{appkey}/requests?p=
 
 [Path Parameters]
 
-|이름|	자료형|	설명|
+|Name| Data Type | Description |
 |---|---|---|
-|appkey|	String|	AppKey|
-|p|	String|	암호화된 Request body Parameter|
+|appkey|	String| AppKey |
+|p|	String| Encrypted request body parameter |
 
-[Request body Parameters]
+[Request Body Parameters]
 
-|이름|	자료형|	설명|
+|Name| Data Type | Description |
 |---|---|---|
-|custNo|	long|	고객번호 (Console 페이지 내 있음)|
-|crtKey|	String|	고객인증키 (Console 페이지 내 있음)|
-|bnoList|	String|	사업자등록번호 (복수개가능)|
+|custNo|	long| Client number (available on TOAST Console) |
+|crtKey|	String| Client authentication key (available on TOAST Console) |
+|bnoList|	String| Business registration number (one or many) |
 
-[Example Request]
+[Example of Request]
 
 ```
 {"custNo":1
 ,"crtKey":"qaz!@wsx"
 ,"bnoList":["1234567890","0123456789","9012345678"]}
 
-Json데이터를 AES256 암호화 처리후, URLEncoder(UTF-8) 처리된 데이터
+Encrypt JSON data in AES256 and process them as URLEncoder(UTF-8) 
 rteo7fjjhGlVznybl239YSngEb2Y3VHOSJaM12AGasdyI1Y0pclSFnPo8uD8eHLFJ41AigDRpsXW36aBQoJXkTFhVeTQ4CMJFg8qKUXj%2Bl%2BwxjdkDJxVdCkJlh4Nnvxm
 ```
 
-[Example request URL]
+[Example of Request URL]
 
 ```
 https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/1sdaf3rs34d2/requests?p=rteo7fjjhGlVznybl239YSngEb2Y3VHOSJaM12AGasdyI1Y0pclSFnPo8uD8eHLFJ41AigDRpsXW36aBQoJXkTFhVeTQ4CMJFg8qKUXj%2Bl%2BwxjdkDJxVdCkJlh4Nnvxm
 ```
 
-[Example Response]
+[Example of Response]
 
 ```
 {
     "header": {
         "resultCode": 0,
-        "resultMessage": "정상적으로 요청되었습니다.",
+        "resultMessage": "Properly requested.",
         "successful": true
     },
     "data": {
@@ -65,15 +64,15 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/1sdaf3rs34d2/request
 
 [Response]
 
-|이름|	자료형|	설명|
+|Name| Data Type | Description |
 |---|---|---|
-|reqNo|	long|	요청번호|
-|resultCnt|	int|	요청된 사업자등록번호 갯수|
-|reqDate|	String|	요청된 일시|
+|reqNo|	long| Request number |
+|resultCnt|	int| Requested number of business registration numbers |
+|reqDate|	String| Date and time of request |
 
 <br/>
 
-### 거래처 휴/페업 요청 상태확인
+### Check Status of Request for Query of Business Closure/Cessation 
 ------------------------------------
 
 [HTTP request]
@@ -85,43 +84,43 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/{appkey}/verificatio
 
 [Path Parameters]
 
-|이름|	자료형|	설명|
+|Name| Data Type | Description |
 |---|---|---|
-|appkey|	String|	AppKey|
-|p|	String|	암호화된 Request body Parameter|
+|appkey|	String| AppKey |
+|p|	String| Encrypted request body parameter |
 
 [Request body Parameters]
 
-|이름|	자료형|	설명|
+|Name| Data Type | Description |
 |---|---|---|
-|custNo|	long|	고객번호 (Console 페이지 내 있음)|
-|crtKey|	String|	고객인증키 (Console 페이지 내 있음)|
-|reqNo|	long|	요청번호|
+|custNo|	long| Client number (available on TOAST Console) |
+|crtKey|	String| Client authentication key (available on TOAST Console) |
+|reqNo|	long| Request number |
 
-[Example Request]
+[Example of Request]
 
 ```
 {"custNo":1
 ,"crtKey":"qaz!@wsx"
 ,"reqNo":58}
 
-Json데이터를 AES256 암호화 처리후, URLEncoder(UTF-8) 처리된 데이터
+Encrypt JSON data in AES256 and process them as URLEncoder(UTF-8)
 TSNRsStai0hQUM5m40dyDxIJsW5TON7QqVYjjhCIjBUKbMFqmiM1xZ8ND5%2Buo5xd
 ```
 
-[Example Request URL]
+[Example of Request URL]
 
 ```
 https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/1sdaf3rs34d2/verification?p=TSNRsStai0hQUM5m40dyDxIJsW5TON7QqVYjjhCIjBUKbMFqmiM1xZ8ND5%2Buo5xd
 ```
 
-[Example Response]
+[Example of Response]
 
 ```
 {
     "header": {
         "resultCode": 0,
-        "resultMessage": "정상적으로 요청되었습니다.",
+        "resultMessage": "Properly requested.",
         "successful": true
     },
     "data": {
@@ -133,14 +132,14 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/1sdaf3rs34d2/verific
 
 [Response]
 
-|이름|	자료형|	설명|
+|Name| Data Type | Description |
 |---|---|---|
-|reqNo|	long|	요청번호|
-|resultDate|	String|	완료일시|
+|reqNo|	long| Request number |
+|resultDate|	String| Date and time of completion |
 
 <br/>
 
-### 거래처 휴/페업 요청 결과데이터 받기
+### Receive Result of Request for Query of Business Closure/Cessation 
 ------------------------------------
 
 [HTTP request]
@@ -152,83 +151,83 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/{appkey}/results?p={
 
 [Path Parameters]
 
-|이름|	자료형|	설명|
+|Name| Data Type | Description |
 |---|---|---|
-|appkey|	String|	AppKey|
-|p|	String|	암호화된 Request body Parameter|
+|appkey|	String| AppKey |
+|p|	String| Encrypted request body parameter |
 
 [Request body Parameters]
 
-|이름|	자료형|	설명|
+|Name| Data Type | Description |
 |---|---|---|
-|custNo|	long|	고객번호 (Console 페이지 내 있음)|
-|crtKey|	String|	고객인증키 (Console 페이지 내 있음)|
-|reqNo|	long|	요청번호|
-|scn|	String [Y,N]|	거래처명 조회Flag [필수값 아님]|
+|custNo|	long| Client number (available on TOAST Console) |
+|crtKey|	String| Client authentication key (available on TOAST Console) |
+|reqNo|	long| Request number |
+|scn| String [Y,N] | Query flag of business name [not required] |
 
-[Example Request]
+[Example of Request]
 
 ```
 {"custNo":1
 ,"crtKey":"qaz!@wsx"
 ,"reqNo":58}
 
-Json데이터를 AES256 암호화 처리후, URLEncoder(UTF-8) 처리된 데이터
+Encrypt JSON data in AES256 and process them as URLEncoder(UTF-8)
 TSNRsStai0hQUM5m40dyDxIJsW5TON7QqVYjjhCIjBUKbMFqmiM1xZ8ND5%2Buo5xd
 ```
 
-[Example Request URL]
+[Example of Request URL]
 
 ```
 https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/1sdaf3rs34d2/results?p=TSNRsStai0hQUM5m40dyDxIJsW5TON7QqVYjjhCIjBUKbMFqmiM1xZ8ND5%2Buo5xd
 ```
 
-[Example Response]
+[Example of Response]
 
 ```
 {
     "header": {
         "resultCode": 0,
-        "resultMessage": "조회요청이 완료되었습니다.",
+        "resultMessage": "Completely requested for query.",
         "successful": true
     },
     "data": {
         "reqNo": 58,
         "resultCnt": 8,
         "resultDate": "2015-11-11 10:10:10",
-        "resultEncrytData": "8LAT2G8kMp1rFby+n0gWIDYhpnO/sDSU2zMyp0tLnb9Y901/+sw5agirJsWgpJm6s81R1uwOyC+zzBOG98H+WrC1zAMHX1U5tcpbgF+RSeQdx//8r6Af1NXQ3FZ/IsVJnhvttKEqnpFVzGt11zhNz1Tunj4d+N+MWYEr7BW2izaQXxRlZ0HX8X8lEiJp7JutKO9BKpZbAtR471SsDAtT6gS845CayO2ojA6ujpqtF/v/ZQei+0KEF10eBwutGTmn1i891E7K/NzdsQbu8qeau7Ksx+QrLSm0SaPHrK71XFjincB/xxXp12xc1zsZK3drQQ/U2xbiAY3CPqTXdNjWpj/iBRZaagQcC6VVvlIrMJ4t4O+cr7xsW5iMgmcpg75dPpsa4pkG8V0S9YKGg24TH+qfM7RZ9Xh7m+OSZMQRtbFT4fLLawB4E7mMKRPCBjmR3elQ0vVrNhWZ8kFt+a8C4D+EdWTIplvkS13tKkFFCF4=",
+        "resultEncrytData": "8LAT2G8kMp1rFby+n0gWIDYhpnO/sDSU2zMyp0tLnb9Y901/+sw5agirJsWgpJm6s81R1uwOyC+zzBOG98H+WrC1zAMHX1U5tcpbgF+RSeQdx//8r6Af1NXQ3FZ/IsVJnhvttKEqnpFVzGt11zhNz1Tunj ㅍ4d+N+MWYEr7BW2izaQXxRlZ0HX8X8lEiJp7JutKO9BKpZbAtR471SsDAtT6gS845CayO2ojA6ujpqtF/v/ZQei+0KEF10eBwutGTmn1i891E7K/NzdsQbu8qeau7Ksx+QrLSm0SaPHrK71XFjincB/xxXp12xc1zsZK3drQQ/U2xbiAY3CPqTXdNjWpj/iBRZaagQcC6VVvlIrMJ4t4O+cr7xsW5iMgmcpg75dPpsa4pkG8V0S9YKGg24TH+qfM7RZ9Xh7m+OSZMQRtbFT4fLLawB4E7mMKRPCBjmR3elQ0vVrNhWZ8kFt+a8C4D+EdWTIplvkS13tKkFFCF4=",
 }
 }
 ```
 
 [Response]
 
-|이름|	자료형|	설명|
+|Name| Data Type | Description |
 |---|---|---|
-|reqNo|	long|	요청번호|
-|resultCnt|	int|	완료데이터 갯수|
-|resultDate|	String|	완료일자|
-|resultEncrytData|	String|	암호화된 휴페업정보데이터|
+|reqNo|	long| Request number |
+|resultCnt|	int| Number of completed data |
+|resultDate|	String| Date and time of completion |
+|resultEncrytData|	String| Encrypted data of business closure/cessation |
 
-resultEncrytData 해당데이터의 URLDecoder 처리 후, AES256 복호화 처리
+Process URLDecoder of corresponding resultEncrytData, and decrypt AES256 
 
 ```
-[{"bno":"1234567890","bnoCd":"01","bnoCont":"부가가치세 일반과세자 입니다.","bnoDate":"2015-11-11 10:10:10"}
-,{"bno":"1234567890","bnoCd":"01","bnoCont":"부가가치세 일반과세자 입니다.","bnoDate":"2015-11-11 10:10:10"}
-,{"bno":"1234567890","bnoCd":"01","bnoCont":"부가가치세 일반과세자 입니다.","bnoDate":"2015-11-10 10:10:10"}]
+[{"bno":"1234567890","bnoCd":"01","bnoCont":"General taxpayer for value-added tax.","bnoDate":"2015-11-11 10:10:10"}
+,{"bno":"1234567890","bnoCd":"01","bnoCont":"General taxpayer for value-added tax.","bnoDate":"2015-11-11 10:10:10"}
+,{"bno":"1234567890","bnoCd":"01","bnoCont":"General taxpayer for value-added tax.","bnoDate":"2015-11-10 10:10:10"}]
 ```
 
-|이름|	자료형|	설명|
+|Name| Data Type | Description |
 |---|---|---|
-|bno|	String|	사업자등록번호|
-|bnoCd|	String|	결과결과코드|
-|bnoCont|	String|	조회결과|
-|bnoDate|	String|	조회날자|
-|custNm|	String|	거래처명 (scn이 Y인경우만 포함됨)|
+|bno|	String| Business registration number |
+|bnoCd|	String| Result code |
+|bnoCont|	String| Query result |
+|bnoDate|	String| Date of query |
+|custNm|	String| Business name (included only when scn is Y) |
 
 <br/>
 
-### 거래처 휴/페업 최근 요청중인 요청번호 확인
+### Check Recent Request Number for Query of Business Closure/Cessation
 ------------------------------------
 
 [HTTP request]
@@ -240,41 +239,41 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/{appkey}/recent?p={p
 
 [Path Parameters]
 
-|이름|	자료형|	설명|
+|Name| Data Type | Description |
 |---|---|---|
-|appkey|	String|	AppKey|
-|p|	String|	암호화된 Request body Parameter|
+|appkey|	String| AppKey |
+|p|	String| Encrypted request body parameter |
 
 [Request body Parameters]
 
-|이름|	자료형|	설명|
+|Name| Data Type | Description |
 |---|---|---|
-|custNo|	long|	고객번호 (Console 페이지 내 있음)|
-|crtKey|	String|	고객인증키 (Console 페이지 내 있음)|
+|custNo|	long| Client number (available on TOAST Console) |
+|crtKey|	String| Client authentication key (available on TOAST Console) |
 
-[Example Request]
+[Example of Request]
 
 ```
 {"custNo":1
 ,"crtKey":"qaz!@wsx"}
 
-Json데이터를 AES256 암호화 처리후, URLEncoder(UTF-8) 처리된 데이터
+Encrypt JSON data in AES256 and process them as URLEncoder(UTF-8)
 3Tm2TS3ynvXw3jcgh1SzQcMIBA2EIRp%2FheQSAsWSXHTP0TODL%2FYEL1Iml3Qn1CWn
 ```
 
-[Example Request URL]
+[Example of Request URL]
 
 ```
 https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/1sdaf3rs34d2/verification?p=3Tm2TS3ynvXw3jcgh1SzQcMIBA2EIRp%2FheQSAsWSXHTP0TODL%2FYEL1Iml3Qn1CWn
 ```
 
-[Example Response]
+[Example of Response]
 
 ```
 {
     "header": {
         "resultCode": 0,
-        "resultMessage": "정상적으로 요청되었습니다.",
+        "resultMessage": "Properly requested.",
         "successful": true
     },
     "data": {
@@ -286,17 +285,17 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/1sdaf3rs34d2/verific
 
 [Response]
 
-|이름|	자료형|	설명|
+|Name| Data Type | Description |
 |---|---|---|
-|recentReqNo|	long|	최근요청번호|
-|recentReqDate|	String|	최근요청일시|
+|recentReqNo|	long| Recent request number |
+|recentReqDate|	String| Recent date/time of request |
 
 <br/>
 
-### 거래처 휴/페업 최근 일주일내 요청내역 확인
+### Check Requests of Recent 1 Week for Query of Business Closure/Cessation 
 ------------------------------------
 
-[HTTP request]
+[HTTP Request]
 
 ```
 GET
@@ -305,40 +304,39 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/{appkey}/reqlists?p=
 
 [Path Parameters]
 
-|이름|	자료형|	설명|
+|Name| Data Type | Description |
 |---|---|---|
-|appkey|	String|	AppKey|
-|p|	String|	암호화된 Request body Parameter|
+|appkey|	String| AppKey |
+|p|	String| Encrypted request body parameter |
 
 [Request body Parameters]
 
-|이름|	자료형|	설명|
+|Name| Data Type | Description |
 |---|---|---|
-|custNo|	long|	고객번호 (Console 페이지 내 있음)|
-|crtKey|	String|	고객인증키 (Console 페이지 내 있음)|
+|custNo|	long| Client number (available on TOAST Console) |
+|crtKey|	String| Client authentication key (available on TOAST Console) |
 
-[Example Request]
+[Example of Request]
 
 <pre><code>{"custNo":1
 ,"crtKey":"qaz!@wsx"}
-
-Json데이터를 AES256 암호화 처리후, URLEncoder(UTF-8) 처리된 데이터
+Encrypt JSON data in AES256 and process them as URLEncoder(UTF-8)
 3Tm2TS3ynvXw3jcgh1SzQcMIBA2EIRp%2FheQSAsWSXHTP0TODL%2FYEL1Iml3Qn1CWn</code></pre>
 
 
-[Example Request URL]
+[Example of Request URL]
 
 ```
 https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/1sdaf3rs34d2/reqlists?p=3Tm2TS3ynvXw3jcgh1SzQcMIBA2EIRp%2FheQSAsWSXHTP0TODL%2FYEL1Iml3Qn1CWn
 ```
 
-[Example Response]
+[Example of Response]
 
 ```
 {
     "header": {
         "resultCode": 0,
-        "resultMessage": "정상적으로 요청되었습니다.",
+        "resultMessage": "Properly requested.",
         "successful": true
     },
     "data": {
@@ -350,35 +348,35 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/1sdaf3rs34d2/reqlist
 
 [Response]
 
-|이름|	자료형|	설명|
+|Name| Data Type | Description |
 |---|---|---|
-|reqNo|	long|	요청번호|
-|reqStatCd|	String|	요청상태|
-|reqYmdt|	String|	요청일시|
-|trtYmdt|	String|	결과일시|
-|reqCnt|	int|	요청갯수|
+|reqNo|	long| Request number |
+|reqStatCd|	String| Status of request |
+|reqYmdt|	String| Date/time of request |
+|trtYmdt|	String| Date/time of receiving result |
+|reqCnt|	int| Number of requests |
 
 <br/>
 
-## 참고사항
-### 결과조회코드표
-|코드값|	결과값|
+## References 
+### Table of Query Result Codes 
+|Code| Result |
 |---|---|
-|00|	사업을 하고 있지 않는 사업자|
-|01|	부가가치세 일반과세자|
-|02|	부가가치세 간이과세자|
-|03|	부가가치세 면세사업자|
-|04|	수익사업을 영위하지 않는 비영리법인이거나 고유번호가 부여된 단체.국가기관|
-|05|	휴업자|
-|06|	폐업자|
-|09|	기타|
+|00| Business owner who is not operating business |
+|01| General taxpayer for value-added tax |
+|02| Simplified taxpayer for value-added tax |
+|03| Business owner who is exempted from value-added tax |
+|04| Non-profit corporations or organization who own original numbers: national institutions |
+|05| Ceased business owner |
+|06| Closed business owner |
+|09| Others |
 
 <br/>
 
-### AES 256 암호화
+### Encrypt AES 256  
 
-> 암호화모듈 개발시 CBC, 패딩은 PKCS5Padding 사용
+> Use CBC for the development of encryption module, or PKCS5Padding for padding
 > [Example] 
 Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding")
 
-> 문자셋 Encoding은 UTF8을 사용
+> Apply UTF-8 to encode character sets 

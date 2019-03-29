@@ -1,12 +1,12 @@
-## Search > Corporation Search > Release Notes
+## Search > Corporation Search > Release Notes 
 
-### 2017.06.25
-#### 기능 변경
+### June 25, 2017
+#### Change of Features 
 
-* 거래처명 조회 기능 추가
-    * 부가 옵션기능으로 해당 사업자번호에 대한 거래처명을 조회 할 수 있다. 
+* Added the feature of querying by client name 
+    * As a further optional feature, business name for business registration number can be queried. 
     
-### 2015.12.17
-#### 신규 상품 출시
-* Corporation Search 상품 출시
-    * 세청에서 관리하고 있는 사업자번호에 대하여 과세유형 및 신규등록, 휴.폐업 여부 및 거래처명을 조회 할 수 있는 서비스 입니다.
+### Dec. 17, 2015
+#### Release of New Service 
+* Release of Corporation Search 
+    * Taxation type, new registration, and closure/cessation of business operations, as well as business name, for business numbers, managed under the National Tax Service, can be queried. 

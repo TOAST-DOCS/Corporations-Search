@@ -1,20 +1,20 @@
-## Search > Corporation Search > Overview
+## Search > Corporation Search > Overview 
 
-국세청에서 관리하고 있는 사업자번호에 대하여 과세유형 및 신규등록, 휴.폐업 여부를 스크래핑 모듈을 통해 조회한 후 재무/세무/ERP시스템과 연동하는 서비스 입니다.  
-본 조회서비스는 정확한 세무처리와 거래 상대방이 세금계산서를 교부할 수 없는 휴.폐업자 또는 간이과세자로 의심되는 경우, 납세자가 이를 확인하여 불의의 피해를 받지 않도록 하기 위한 서비스 입니다.
+With Corporation Search, the taxation type, new registration, and closure/cessation of business operations for business numbers, managed under the National Tax Service, can be queried through scraping modules, so as to integrate them with finance/tax/ERP system.    
+This service helps to process tax affairs more precisely, and enables to prevent potential damage incurred on taxpayers if their business counterparts are suspected of ceased or closed businesses or of simplified taxpayers who cannot issue tax invoices. 
 
-### 서비스 구성도
+### Service Configuration 
 ![](http://static.toastoven.net/prod_corporation_search/Corporation Search_overview01_en.png)
 
-### 제공 서비스
+### Available Services 
 
-|서비스|설명|
+|Service|Description|
 |---|---|
-|과세정보|	사업자 과세유형(일반/간이/면세)|
-|휴.폐업정보|	휴.폐업여부, 휴.폐업일자|
+|Taxation information| Types of business taxation (general/simplified/exempt) |
+|Closure/Cessation of Business Operations| If business is closed or ceased; and, dates of closure/cessation |
 
-### 주요 기능
+### Features 
 
-- 엑셀 파일을 통한, 사업자등록번호의 신규등록, 휴.폐업 여부 대량조회를 지원 합니다.
-- REST API를 제공하고 있어, 다양한 플랫폼에서 손쉽게 사용 할 수 있습니다.
-- REST API를 통한, 실시간 단 건 조회 및 복수 거래처 대량 조회를 지원 합니다.
+- Supports new registration of business numbers, or large-volume query of closure/cessation of business operations in excel files. 
+- Easily available on various platforms, at the support of REST API. 
+- Allows query of single cases in real time, as well as large-volume query of business customers, at the support of REST API. 

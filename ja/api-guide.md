@@ -24,8 +24,8 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/{appkey}/requests?p=
 
 |名前|	データ型|	説明|
 |---|---|---|
-|custNo|	long| 顧客番号(TOAST Consoleページ内にある) |
-|crtKey|	String| 顧客認証キー(TOAST Consoleページ内にある) |
+|custNo|	long| 顧客番号(NHN Cloud Consoleページ内にある) |
+|crtKey|	String| 顧客認証キー(NHN Cloud Consoleページ内にある) |
 |bnoList|	String| 事業者登録番号(複数可能) |
 
 [Example Request]
@@ -93,8 +93,8 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/{appkey}/verificatio
 
 |名前|	データ型|	説明|
 |---|---|---|
-|custNo|	long|	顧客番号(TOAST Consoleページ内にある)|
-|crtKey|	String|	顧客認証キー(TOAST Consoleページ内にある)|
+|custNo|	long|	顧客番号(NHN Cloud Consoleページ内にある)|
+|crtKey|	String|	顧客認証キー(NHN Cloud Consoleページ内にある)|
 |reqNo|	long|	要請番号|
 
 [Example Request]
@@ -160,8 +160,8 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/{appkey}/results?p={
 
 |名前|	データ型|	説明|
 |---|---|---|
-|custNo|	long|	顧客番号(TOAST Consoleページ内にある)|
-|crtKey|	String|	顧客認証キー(TOAST Consoleページ内にある)|
+|custNo|	long|	顧客番号(NHN Cloud Consoleページ内にある)|
+|crtKey|	String|	顧客認証キー(NHN Cloud Consoleページ内にある)|
 |reqNo|	long|	要請番号|
 |scn| String [Y,N] | 取引先名の照会フラグ[必須値ではない] |
 
@@ -248,8 +248,8 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/{appkey}/recent?p={p
 
 |名前|	データ型|	説明|
 |---|---|---|
-|custNo|	long|	顧客番号(TOAST Consoleページ内にある)|
-|crtKey|	String|	顧客認証キー(TOAST Consoleページ内にある)|
+|custNo|	long|	顧客番号(NHN Cloud Consoleページ内にある)|
+|crtKey|	String|	顧客認証キー(NHN Cloud Consoleページ内にある)|
 
 [Example Request]
 
@@ -313,8 +313,8 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/{appkey}/reqlists?p=
 
 |名前|	データ型|	説明|
 |---|---|---|
-|custNo|	long|	顧客番号(TOAST Consoleページ内にある)|
-|crtKey|	String|	顧客認証キー(TOAST Consoleページ内にある)|
+|custNo|	long|	顧客番号(NHN Cloud Consoleページ内にある)|
+|crtKey|	String|	顧客認証キー(NHN Cloud Consoleページ内にある)|
 
 [Example Request]
 

@@ -24,8 +24,8 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/{appkey}/requests?p=
 
 |Name| Data Type | Description |
 |---|---|---|
-|custNo|	long| Client number (available on TOAST Console) |
-|crtKey|	String| Client authentication key (available on TOAST Console) |
+|custNo|	long| Client number (available on NHN Cloud Console) |
+|crtKey|	String| Client authentication key (available on NHN Cloud Console) |
 |bnoList|	String| Business registration number (one or many) |
 
 [Example of Request]
@@ -93,8 +93,8 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/{appkey}/verificatio
 
 |Name| Data Type | Description |
 |---|---|---|
-|custNo|	long| Client number (available on TOAST Console) |
-|crtKey|	String| Client authentication key (available on TOAST Console) |
+|custNo|	long| Client number (available on NHN Cloud Console) |
+|crtKey|	String| Client authentication key (available on NHN Cloud Console) |
 |reqNo|	long| Request number |
 
 [Example of Request]
@@ -160,8 +160,8 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/{appkey}/results?p={
 
 |Name| Data Type | Description |
 |---|---|---|
-|custNo|	long| Client number (available on TOAST Console) |
-|crtKey|	String| Client authentication key (available on TOAST Console) |
+|custNo|	long| Client number (available on NHN Cloud Console) |
+|crtKey|	String| Client authentication key (available on NHN Cloud Console) |
 |reqNo|	long| Request number |
 |scn| String [Y,N] | Query flag of business name [not required] |
 
@@ -248,8 +248,8 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/{appkey}/recent?p={p
 
 |Name| Data Type | Description |
 |---|---|---|
-|custNo|	long| Client number (available on TOAST Console) |
-|crtKey|	String| Client authentication key (available on TOAST Console) |
+|custNo|	long| Client number (available on NHN Cloud Console) |
+|crtKey|	String| Client authentication key (available on NHN Cloud Console) |
 
 [Example of Request]
 
@@ -313,8 +313,8 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/{appkey}/reqlists?p=
 
 |Name| Data Type | Description |
 |---|---|---|
-|custNo|	long| Client number (available on TOAST Console) |
-|crtKey|	String| Client authentication key (available on TOAST Console) |
+|custNo|	long| Client number (available on NHN Cloud Console) |
+|crtKey|	String| Client authentication key (available on NHN Cloud Console) |
 
 [Example of Request]
 

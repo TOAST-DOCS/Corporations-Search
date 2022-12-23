@@ -11,7 +11,7 @@ Temporary/Permanently Closed Client Request
 \[URL\]
 
     POST   [Content-Type : application/x-www-form-urlencoded]
-    https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/{appkey}/requests?p={param}
+    https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/{appkey}/requests?p={param}
 
 \[Path Parameter\]
 
@@ -39,7 +39,7 @@ Temporary/Permanently Closed Client Request
 
 \[Example Request url\]
 
-    https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/1sdaf3rs34d2/requests?p= rteo7fjjhGlVznybl239YSngEb2Y3VHOSJaM12AGasdyI1Y0pclSFnPo8uD8eHLFJ41AigDRpsXW36aBQoJXkTFhVeTQ4CMJFg8qKUXj%2Bl%2BwxjdkDJxVdCkJlh4Nnvxm
+    https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/1sdaf3rs34d2/requests?p= rteo7fjjhGlVznybl239YSngEb2Y3VHOSJaM12AGasdyI1Y0pclSFnPo8uD8eHLFJ41AigDRpsXW36aBQoJXkTFhVeTQ4CMJFg8qKUXj%2Bl%2BwxjdkDJxVdCkJlh4Nnvxm
 
 \[Example Response\]
 
@@ -70,7 +70,7 @@ Check the Status of Temporary/Permanently Closed Client Request
 \[URL\]
 
     GET
-    https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/{appkey}/verification?p={param}
+    https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/{appkey}/verification?p={param}
 
 \[Path Parameter\]
 
@@ -98,7 +98,7 @@ Check the Status of Temporary/Permanently Closed Client Request
 
 \[Example Request url\]
 
-    https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/1sdaf3rs34d2/verification?p= TSNRsStai0hQUM5m40dyDxIJsW5TON7QqVYjjhCIjBUKbMFqmiM1xZ8ND5%2Buo5xd
+    https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/1sdaf3rs34d2/verification?p= TSNRsStai0hQUM5m40dyDxIJsW5TON7QqVYjjhCIjBUKbMFqmiM1xZ8ND5%2Buo5xd
 
 \[Example Response\]
 
@@ -127,7 +127,7 @@ Receive Result Data on Temporary/Permanently Closed Client Request
 \[URL\]
 
     GET
-    https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/{appkey}/results?p={param}
+    https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/{appkey}/results?p={param}
 
 \[Path Parameter\]
 
@@ -155,7 +155,7 @@ Receive Result Data on Temporary/Permanently Closed Client Request
 
 \[Example Request url\]
 
-    https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/1sdaf3rs34d2/results?p= TSNRsStai0hQUM5m40dyDxIJsW5TON7QqVYjjhCIjBUKbMFqmiM1xZ8ND5%2Buo5xd
+    https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/1sdaf3rs34d2/results?p= TSNRsStai0hQUM5m40dyDxIJsW5TON7QqVYjjhCIjBUKbMFqmiM1xZ8ND5%2Buo5xd
 
 \[Example Response\]
 
@@ -201,7 +201,7 @@ Check Request Number of Temporary/Permanently Closed Clients Recently Requested
 \[URL\]
 
     GET
-    https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/{appkey}/recent?p={param}
+    https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/{appkey}/recent?p={param}
 
 \[Path Parameter\]
 
@@ -227,7 +227,7 @@ Check Request Number of Temporary/Permanently Closed Clients Recently Requested
 
 \[Example Request url\]
 
-    https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/1sdaf3rs34d2/verification?p= 3Tm2TS3ynvXw3jcgh1SzQcMIBA2EIRp%2FheQSAsWSXHTP0TODL%2FYEL1Iml3Qn1CWn
+    https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/1sdaf3rs34d2/verification?p= 3Tm2TS3ynvXw3jcgh1SzQcMIBA2EIRp%2FheQSAsWSXHTP0TODL%2FYEL1Iml3Qn1CWn
 
 \[Example Response\]
 
@@ -256,7 +256,7 @@ Check Request History of Temporary/Permanently Closed Clients within a Week
 \[URL\]
 
     GET
-    https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/{appkey}/reqlists?p={param}
+    https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/{appkey}/reqlists?p={param}
 
 \[Path Parameter\]
 
@@ -282,7 +282,7 @@ Check Request History of Temporary/Permanently Closed Clients within a Week
 
 \[Example Request url\]
 
-    https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/1sdaf3rs34d2/reqlists?p= 3Tm2TS3ynvXw3jcgh1SzQcMIBA2EIRp%2FheQSAsWSXHTP0TODL%2FYEL1Iml3Qn1CWn
+    https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/1sdaf3rs34d2/reqlists?p= 3Tm2TS3ynvXw3jcgh1SzQcMIBA2EIRp%2FheQSAsWSXHTP0TODL%2FYEL1Iml3Qn1CWn
 
 \[Example Response\]
 

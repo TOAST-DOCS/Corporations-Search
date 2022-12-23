@@ -11,7 +11,7 @@
 
 ```
 POST   [Content-Type : application/x-www-form-urlencoded]
-https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/{appkey}/requests?p={param}
+https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/{appkey}/requests?p={param}
 ```
 
 [Path Parameter]

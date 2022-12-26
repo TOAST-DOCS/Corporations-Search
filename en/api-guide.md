@@ -10,7 +10,7 @@ By calling APIs as below, closure or cessation of business operations can be que
 
 ```
 POST   [Content-Type : application/x-www-form-urlencoded]
-https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/{appkey}/requests?p={param}
+https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/{appkey}/requests?p={param}
 ```
 
 [Path Parameters]
@@ -42,7 +42,7 @@ rteo7fjjhGlVznybl239YSngEb2Y3VHOSJaM12AGasdyI1Y0pclSFnPo8uD8eHLFJ41AigDRpsXW36aB
 [Example of Request URL]
 
 ```
-https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/1sdaf3rs34d2/requests?p=rteo7fjjhGlVznybl239YSngEb2Y3VHOSJaM12AGasdyI1Y0pclSFnPo8uD8eHLFJ41AigDRpsXW36aBQoJXkTFhVeTQ4CMJFg8qKUXj%2Bl%2BwxjdkDJxVdCkJlh4Nnvxm
+https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/1sdaf3rs34d2/requests?p=rteo7fjjhGlVznybl239YSngEb2Y3VHOSJaM12AGasdyI1Y0pclSFnPo8uD8eHLFJ41AigDRpsXW36aBQoJXkTFhVeTQ4CMJFg8qKUXj%2Bl%2BwxjdkDJxVdCkJlh4Nnvxm
 ```
 
 [Example of Response]
@@ -79,7 +79,7 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/1sdaf3rs34d2/request
 
 ```
 GET
-https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/{appkey}/verification?p={param}
+https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/{appkey}/verification?p={param}
 ```
 
 [Path Parameters]
@@ -111,7 +111,7 @@ TSNRsStai0hQUM5m40dyDxIJsW5TON7QqVYjjhCIjBUKbMFqmiM1xZ8ND5%2Buo5xd
 [Example of Request URL]
 
 ```
-https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/1sdaf3rs34d2/verification?p=TSNRsStai0hQUM5m40dyDxIJsW5TON7QqVYjjhCIjBUKbMFqmiM1xZ8ND5%2Buo5xd
+https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/1sdaf3rs34d2/verification?p=TSNRsStai0hQUM5m40dyDxIJsW5TON7QqVYjjhCIjBUKbMFqmiM1xZ8ND5%2Buo5xd
 ```
 
 [Example of Response]
@@ -146,7 +146,7 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/1sdaf3rs34d2/verific
 
 ```
 GET
-https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/{appkey}/results?p={param}
+https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/{appkey}/results?p={param}
 ```
 
 [Path Parameters]
@@ -179,7 +179,7 @@ TSNRsStai0hQUM5m40dyDxIJsW5TON7QqVYjjhCIjBUKbMFqmiM1xZ8ND5%2Buo5xd
 [Example of Request URL]
 
 ```
-https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/1sdaf3rs34d2/results?p=TSNRsStai0hQUM5m40dyDxIJsW5TON7QqVYjjhCIjBUKbMFqmiM1xZ8ND5%2Buo5xd
+https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/1sdaf3rs34d2/results?p=TSNRsStai0hQUM5m40dyDxIJsW5TON7QqVYjjhCIjBUKbMFqmiM1xZ8ND5%2Buo5xd
 ```
 
 [Example of Response]
@@ -234,7 +234,7 @@ Process URLDecoder of corresponding resultEncrytData, and decrypt AES256
 
 ```
 GET
-https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/{appkey}/recent?p={param}
+https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/{appkey}/recent?p={param}
 ```
 
 [Path Parameters]
@@ -264,7 +264,7 @@ Encrypt JSON data in AES256 and process them as URLEncoder(UTF-8)
 [Example of Request URL]
 
 ```
-https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/1sdaf3rs34d2/verification?p=3Tm2TS3ynvXw3jcgh1SzQcMIBA2EIRp%2FheQSAsWSXHTP0TODL%2FYEL1Iml3Qn1CWn
+https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/1sdaf3rs34d2/verification?p=3Tm2TS3ynvXw3jcgh1SzQcMIBA2EIRp%2FheQSAsWSXHTP0TODL%2FYEL1Iml3Qn1CWn
 ```
 
 [Example of Response]
@@ -299,7 +299,7 @@ https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/1sdaf3rs34d2/verific
 
 ```
 GET
-https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/{appkey}/reqlists?p={param}
+https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/{appkey}/reqlists?p={param}
 ```
 
 [Path Parameters]
@@ -327,7 +327,7 @@ Encrypt JSON data in AES256 and process them as URLEncoder(UTF-8)
 [Example of Request URL]
 
 ```
-https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/1sdaf3rs34d2/reqlists?p=3Tm2TS3ynvXw3jcgh1SzQcMIBA2EIRp%2FheQSAsWSXHTP0TODL%2FYEL1Iml3Qn1CWn
+https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/1sdaf3rs34d2/reqlists?p=3Tm2TS3ynvXw3jcgh1SzQcMIBA2EIRp%2FheQSAsWSXHTP0TODL%2FYEL1Iml3Qn1CWn
 ```
 
 [Example of Response]

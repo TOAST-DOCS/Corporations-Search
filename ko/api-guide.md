@@ -80,9 +80,9 @@ rteo7fjjhGlVznybl239YSngEb2Y3VHOSJaM12AGasdyI1Y0pclSFnPo8uD8eHLFJ41AigDRpsXW36aB
 
 | 이름 | 타입 | 필수 | 설명 |
 | --- | --- | --- | --- |
-| custNo | Long | Y | 고객번호 (Console 페이지 내 있음) |
-| crtKey | String | Y | 고객인증키 (Console 페이지 내 있음) |
-| bnoList | String | Y | 사업자등록번호 (복수개가능) |
+| custNo | Long | Y | 고객번호(Console 페이지 내 있음) |
+| crtKey | String | Y | 고객인증키(Console 페이지 내 있음) |
+| bnoList | String | Y | 사업자등록번호(복수 개 가능) |
 
 ### 응답
 
@@ -160,8 +160,8 @@ TSNRsStai0hQUM5m40dyDxIJsW5TON7QqVYjjhCIjBUKbMFqmiM1xZ8ND5%2Buo5xd
 
 | 이름 | 타입 | 필수 | 설명 |
 | --- | --- | --- | --- |
-| custNo | Long | Y | 고객번호 (Console 페이지 내 있음) |
-| crtKey | String | Y | 고객인증키 (Console 페이지 내 있음) |
+| custNo | Long | Y | 고객번호(Console 페이지 내 있음) |
+| crtKey | String | Y | 고객인증키(Console 페이지 내 있음) |
 | reqNo | Long | Y | 요청번호 |
 
 ### 응답
@@ -238,10 +238,10 @@ TSNRsStai0hQUM5m40dyDxIJsW5TON7QqVYjjhCIjBUKbMFqmiM1xZ8ND5%2Buo5xd
 
 | 이름 | 타입 | 필수 | 설명 |
 | --- | --- | --- | --- |
-| custNo | Long | Y | 고객번호 (Console 페이지 내 있음) |
-| crtKey | String | Y | 고객인증키 (Console 페이지 내 있음) |
+| custNo | Long | Y | 고객번호(Console 페이지 내 있음) |
+| crtKey | String | Y | 고객인증키(Console 페이지 내 있음) |
 | reqNo | Long | Y | 요청번호 |
-| scn | String [Y,N] | N | 거래처명 조회 Flag |
+| scn | String [Y,N] | N | 거래처명 조회 플래그 |
 
 ### 응답
 
@@ -304,7 +304,7 @@ resultEncrytData 해당 데이터의 URLDecoder 처리 후, AES256 복호화 처
 | bnoCd | String | 결과코드 |
 | bnoCont | String | 조회결과 |
 | bnoDate | String | 조회날짜 |
-| custNm | String | 거래처명 (scn이 Y인 경우만 포함됨) |
+| custNm | String | 거래처명(scn이 Y인 경우만 포함됨) |
 
 ---
 
@@ -353,8 +353,8 @@ JSON 데이터를 AES256 암호화 처리 후, URLEncoder(UTF-8) 처리된 데�
 
 | 이름 | 타입 | 필수 | 설명 |
 | --- | --- | --- | --- |
-| custNo | Long | Y | 고객번호 (Console 페이지 내 있음) |
-| crtKey | String | Y | 고객인증키 (Console 페이지 내 있음) |
+| custNo | Long | Y | 고객번호(Console 페이지 내 있음) |
+| crtKey | String | Y | 고객인증키(Console 페이지 내 있음) |
 
 ### 응답
 
@@ -429,8 +429,8 @@ JSON 데이터를 AES256 암호화 처리 후, URLEncoder(UTF-8) 처리된 데�
 
 | 이름 | 타입 | 필수 | 설명 |
 | --- | --- | --- | --- |
-| custNo | Long | Y | 고객번호 (Console 페이지 내 있음) |
-| crtKey | String | Y | 고객인증키 (Console 페이지 내 있음) |
+| custNo | Long | Y | 고객번호(Console 페이지 내 있음) |
+| crtKey | String | Y | 고객인증키(Console 페이지 내 있음) |
 
 ### 응답
 

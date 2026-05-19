@@ -1,4 +1,4 @@
-## Corporation Search API Guide
+# Corporation Search API Guide
 
 **Search > Corporation Search > Corporation Search API Guide**
 
@@ -13,37 +13,24 @@ The Appkey is a unique authentication key issued for each NHN Cloud service and 
 
 For details on how to verify and use the Appkey and SecretKey, refer to [Appkey](/nhncloud/zh/public-api/appkey).
 
-### Common Response Information
-
-<details>
-  <summary><strong>Successful Response</strong></summary>
+## Error Codes
 
 | Response Code | Description |
 | --- | --- |
 | 0 | Successful |
-
-</details>
-
-<details>
-  <summary><strong>Failure Response</strong></summary>
-
-| Response Code | Description |
-| --- | --- |
-|-1002|Error in JSON specifications|
-|-1003|Error in decryption and others|
-|-1006|There is no user registered in the appkey.|
-|-1008|Invalid format of specified date.|
-|-1201|No business is requested.|
-|-1202|Not an authenticated user.|
-|-1203|Querying business owner.|
-|-1204|There is no history of request.|
-|-1205|Invalid request number.|
-|-1206|Invalid business registration number.|
-|-1207|The request number does not exist.|
-|-1208|There is no history of request for the recent 7 days.|
-|-1209|The date/time is already scrapped.|
-
-</details>
+| -1002 | Error in JSON specifications |
+| -1003 | Error in decryption and others |
+| -1006 | There is no user registered in the appkey. |
+| -1008 | Invalid format of specified date. |
+| -1201 | No business is requested. |
+| -1202 | Not an authenticated user. |
+| -1203 | Querying business owner. |
+| -1204 | There is no history of request. |
+| -1205 | Invalid request number. |
+| -1206 | Invalid business registration number. |
+| -1207 | The request number does not exist. |
+| -1208 | There is no history of request for the recent 7 days. |
+| -1209 | The date/time is already scrapped. |
 
 ---
 
@@ -81,9 +68,9 @@ https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/1sdaf3rs34d2/re
 
 ```
 {
-    "custNo":1
-,"crtKey":"qaz!@wsx"
-,"bnoList":["1234567890","0123456789","9012345678"]
+    "custNo": 1,
+    "crtKey": "qaz!@wsx",
+    "bnoList": ["1234567890", "0123456789", "9012345678"]
 }
 
 Encrypt JSON data in AES256 and process as URLEncoder(UTF-8)
@@ -160,9 +147,11 @@ https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/1sdaf3rs34d2/ve
   <summary><strong>Example Code</strong></summary>
 
 ```
-{"custNo":1
-,"crtKey":"qaz!@wsx"
-,"reqNo":58}
+{
+    "custNo": 1,
+    "crtKey": "qaz!@wsx",
+    "reqNo": 58
+}
 
 Encrypt JSON data in AES256 and process as URLEncoder(UTF-8)
 TSNRsStai0hQUM5m40dyDxIJsW5TON7QqVYjjhCIjBUKbMFqmiM1xZ8ND5%2Buo5xd
@@ -236,9 +225,11 @@ https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/1sdaf3rs34d2/re
   <summary><strong>Example Code</strong></summary>
 
 ```
-{"custNo":1
-,"crtKey":"qaz!@wsx"
-,"reqNo":58}
+{
+    "custNo": 1,
+    "crtKey": "qaz!@wsx",
+    "reqNo": 58
+}
 
 Encrypt JSON data in AES256 and process as URLEncoder(UTF-8)
 TSNRsStai0hQUM5m40dyDxIJsW5TON7QqVYjjhCIjBUKbMFqmiM1xZ8ND5%2Buo5xd
@@ -286,9 +277,26 @@ TSNRsStai0hQUM5m40dyDxIJsW5TON7QqVYjjhCIjBUKbMFqmiM1xZ8ND5%2Buo5xd
 Process URLDecoder of corresponding resultEncrytData, and decrypt AES256.
 
 ```
-[{"bno":"1234567890","bnoCd":"01","bnoCont":"General taxpayer for value-added tax.","bnoDate":"2015-11-11 10:10:10"}
-,{"bno":"1234567890","bnoCd":"01","bnoCont":"General taxpayer for value-added tax.","bnoDate":"2015-11-11 10:10:10"}
-,{"bno":"1234567890","bnoCd":"01","bnoCont":"General taxpayer for value-added tax.","bnoDate":"2015-11-10 10:10:10"}]
+[
+    {
+        "bno": "1234567890",
+        "bnoCd": "01",
+        "bnoCont": "General taxpayer for value-added tax.",
+        "bnoDate": "2015-11-11 10:10:10"
+    },
+    {
+        "bno": "1234567890",
+        "bnoCd": "01",
+        "bnoCont": "General taxpayer for value-added tax.",
+        "bnoDate": "2015-11-11 10:10:10"
+    },
+    {
+        "bno": "1234567890",
+        "bnoCd": "01",
+        "bnoCont": "General taxpayer for value-added tax.",
+        "bnoDate": "2015-11-10 10:10:10"
+    }
+]
 ```
 
 | Name | Data Type | Description |
@@ -333,8 +341,10 @@ https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/1sdaf3rs34d2/re
   <summary><strong>Example Code</strong></summary>
 
 ```
-{"custNo":1
-,"crtKey":"qaz!@wsx"}
+{
+    "custNo": 1,
+    "crtKey": "qaz!@wsx"
+}
 
 Encrypt JSON data in AES256 and process as URLEncoder(UTF-8)
 3Tm2TS3ynvXw3jcgh1SzQcMIBA2EIRp%2FheQSAsWSXHTP0TODL%2FYEL1Iml3Qn1CWn
@@ -407,8 +417,10 @@ https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/1sdaf3rs34d2/re
   <summary><strong>Example Code</strong></summary>
 
 ```
-{"custNo":1
-,"crtKey":"qaz!@wsx"}
+{
+    "custNo": 1,
+    "crtKey": "qaz!@wsx"
+}
 
 Encrypt JSON data in AES256 and process as URLEncoder(UTF-8)
 3Tm2TS3ynvXw3jcgh1SzQcMIBA2EIRp%2FheQSAsWSXHTP0TODL%2FYEL1Iml3Qn1CWn
@@ -435,8 +447,20 @@ Encrypt JSON data in AES256 and process as URLEncoder(UTF-8)
     },
     "data": {
         "reqList": [
-            {"reqNo":68,"reqStatCd":"REQUEST","reqYmdt":"2015-10-10 10:10:10","trtYmdt":"","reqCnt":20},
-            {"reqNo":69,"reqStatCd":"COMPLETE","reqYmdt":"2015-10-10 10:10:10","trtYmdt":"2015-10-12 10:10:10","reqCnt":20}
+            {
+                "reqNo": 68,
+                "reqStatCd": "REQUEST",
+                "reqYmdt": "2015-10-10 10:10:10",
+                "trtYmdt": "",
+                "reqCnt": 20
+            },
+            {
+                "reqNo": 69,
+                "reqStatCd": "COMPLETE",
+                "reqYmdt": "2015-10-10 10:10:10",
+                "trtYmdt": "2015-10-12 10:10:10",
+                "reqCnt": 20
+            }
         ]
     }
 }

@@ -1,4 +1,4 @@
-## Corporation Search API 가이드
+# Corporation Search API 가이드
 
 **Search > Corporation Search > Corporation Search API 가이드**
 
@@ -12,22 +12,11 @@ Appkey는 NHN Cloud의 각 서비스별로 발급되는 고유 인증 키로 API
 
 Appkey 및 SecretKey 확인 및 사용에 대한 자세한 내용은 [Appkey](/nhncloud/ko/public-api/appkey)를 참고하세요.
 
-### 응답 공통 정보
-
-<details>
-  <summary><strong>성공 응답</strong></summary>
+## 오류코드
 
 | 응답코드 | 설명 |
 | --- | --- |
 | 0 | 성공 |
-
-</details>
-
-<details>
-  <summary><strong>실패 응답</strong></summary>
-
-| 응답코드 | 설명 |
-| --- | --- |
 | -1002 | JSON 규격 에러 |
 | -1003 | 복호화 및 기타 에러 |
 | -1006 | 해당 AppKey의 등록된 사용자가 없습니다. |
@@ -36,19 +25,17 @@ Appkey 및 SecretKey 확인 및 사용에 대한 자세한 내용은 [Appkey](/n
 | -1202 | 인증된 사용자가 아닙니다. |
 | -1203 | 사업자조회가 처리중입니다. |
 | -1204 | 요청된 내역이 없습니다. |
-| -1205 | 잘못된 요청번호 입니다. |
-| -1206 | 잘못된 사업자번호() 입니다. |
-| -1207 | 존재하지 않는 요청번호 입니다. |
+| -1205 | 잘못된 요청번호입니다. |
+| -1206 | 잘못된 사업자번호입니다. |
+| -1207 | 존재하지 않는 요청번호입니다. |
 | -1208 | 최근 7일간 요청내역이 없습니다. |
 | -1209 | 해당 일자는 이미 스크래핑이 완료되었습니다. |
 
-</details>
-
 ---
 
-## 거래처 휴/페업 요청
+## 거래처 휴/폐업 요청
 
-거래처 사업자등록번호 목록에 대한 휴/페업 정보 조회를 요청합니다.
+거래처 사업자등록번호 목록에 대한 휴/폐업 정보 조회를 요청합니다.
 
 ### 요청
 
@@ -80,12 +67,12 @@ https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/1sdaf3rs34d2/re
 
 ```
 {
-    "custNo":1
-,"crtKey":"qaz!@wsx"
-,"bnoList":["1234567890","0123456789","9012345678"]
+    "custNo": 1,
+    "crtKey": "qaz!@wsx",
+    "bnoList": ["1234567890", "0123456789", "9012345678"]
 }
 
-Json데이터를 AES256 암호화 처리후, URLEncoder(UTF-8) 처리된 데이터
+JSON 데이터를 AES256 암호화 처리 후, URLEncoder(UTF-8) 처리된 데이터
 rteo7fjjhGlVznybl239YSngEb2Y3VHOSJaM12AGasdyI1Y0pclSFnPo8uD8eHLFJ41AigDRpsXW36aBQoJXkTFhVeTQ4CMJFg8qKUXj%2Bl%2BwxjdkDJxVdCkJlh4Nnvxm
 ```
 
@@ -93,9 +80,9 @@ rteo7fjjhGlVznybl239YSngEb2Y3VHOSJaM12AGasdyI1Y0pclSFnPo8uD8eHLFJ41AigDRpsXW36aB
 
 | 이름 | 타입 | 필수 | 설명 |
 | --- | --- | --- | --- |
-| custNo | Long | Y | 고객번호 (Console 페이지 내 있음) |
-| crtKey | String | Y | 고객인증키 (Console 페이지 내 있음) |
-| bnoList | String | Y | 사업자등록번호 (복수개가능) |
+| custNo | Long | Y | 고객번호(Console 페이지 내 있음) |
+| crtKey | String | Y | 고객인증키(Console 페이지 내 있음) |
+| bnoList | String | Y | 사업자등록번호(복수 개 가능) |
 
 ### 응답
 
@@ -122,14 +109,14 @@ rteo7fjjhGlVznybl239YSngEb2Y3VHOSJaM12AGasdyI1Y0pclSFnPo8uD8eHLFJ41AigDRpsXW36aB
 | 이름 | 타입 | 설명 |
 | --- | --- | --- |
 | reqNo | Long | 요청번호 |
-| resultCnt | Int | 요청된 사업자등록번호 갯수 |
+| resultCnt | Int | 요청된 사업자등록번호 개수 |
 | reqDate | String | 요청된 일시 |
 
 ---
 
-## 거래처 휴/페업 요청 상태확인
+## 거래처 휴/폐업 요청 상태확인
 
-요청한 휴/페업 정보 조회 작업의 처리 상태를 확인합니다.
+요청한 휴/폐업 정보 조회 작업의 처리 상태를 확인합니다.
 
 ### 요청
 
@@ -159,11 +146,13 @@ https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/1sdaf3rs34d2/ve
   <summary><strong>예시 코드</strong></summary>
 
 ```
-{"custNo":1
-,"crtKey":"qaz!@wsx"
-,"reqNo":58}
+{
+    "custNo": 1,
+    "crtKey": "qaz!@wsx",
+    "reqNo": 58
+}
 
-Json데이터를 AES256 암호화 처리후, URLEncoder(UTF-8) 처리된 데이터
+JSON 데이터를 AES256 암호화 처리 후, URLEncoder(UTF-8) 처리된 데이터
 TSNRsStai0hQUM5m40dyDxIJsW5TON7QqVYjjhCIjBUKbMFqmiM1xZ8ND5%2Buo5xd
 ```
 
@@ -171,8 +160,8 @@ TSNRsStai0hQUM5m40dyDxIJsW5TON7QqVYjjhCIjBUKbMFqmiM1xZ8ND5%2Buo5xd
 
 | 이름 | 타입 | 필수 | 설명 |
 | --- | --- | --- | --- |
-| custNo | Long | Y | 고객번호 (Console 페이지 내 있음) |
-| crtKey | String | Y | 고객인증키 (Console 페이지 내 있음) |
+| custNo | Long | Y | 고객번호(Console 페이지 내 있음) |
+| crtKey | String | Y | 고객인증키(Console 페이지 내 있음) |
 | reqNo | Long | Y | 요청번호 |
 
 ### 응답
@@ -203,9 +192,9 @@ TSNRsStai0hQUM5m40dyDxIJsW5TON7QqVYjjhCIjBUKbMFqmiM1xZ8ND5%2Buo5xd
 
 ---
 
-## 거래처 휴/페업 요청 결과데이터 받기
+## 거래처 휴/폐업 요청 결과데이터 받기
 
-요청한 휴/페업 정보 조회의 결과 데이터를 조회합니다.
+요청한 휴/폐업 정보 조회의 결과 데이터를 조회합니다.
 
 ### 요청
 
@@ -235,11 +224,13 @@ https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/1sdaf3rs34d2/re
   <summary><strong>예시 코드</strong></summary>
 
 ```
-{"custNo":1
-,"crtKey":"qaz!@wsx"
-,"reqNo":58}
+{
+    "custNo": 1,
+    "crtKey": "qaz!@wsx",
+    "reqNo": 58
+}
 
-Json데이터를 AES256 암호화 처리후, URLEncoder(UTF-8) 처리된 데이터
+JSON 데이터를 AES256 암호화 처리 후, URLEncoder(UTF-8) 처리된 데이터
 TSNRsStai0hQUM5m40dyDxIJsW5TON7QqVYjjhCIjBUKbMFqmiM1xZ8ND5%2Buo5xd
 ```
 
@@ -247,10 +238,10 @@ TSNRsStai0hQUM5m40dyDxIJsW5TON7QqVYjjhCIjBUKbMFqmiM1xZ8ND5%2Buo5xd
 
 | 이름 | 타입 | 필수 | 설명 |
 | --- | --- | --- | --- |
-| custNo | Long | Y | 고객번호 (Console 페이지 내 있음) |
-| crtKey | String | Y | 고객인증키 (Console 페이지 내 있음) |
+| custNo | Long | Y | 고객번호(Console 페이지 내 있음) |
+| crtKey | String | Y | 고객인증키(Console 페이지 내 있음) |
 | reqNo | Long | Y | 요청번호 |
-| scn | String [Y,N] | N | 거래처명 조회 Flag |
+| scn | String [Y,N] | N | 거래처명 조회 플래그 |
 
 ### 응답
 
@@ -278,16 +269,33 @@ TSNRsStai0hQUM5m40dyDxIJsW5TON7QqVYjjhCIjBUKbMFqmiM1xZ8ND5%2Buo5xd
 | 이름 | 타입 | 설명 |
 | --- | --- | --- |
 | reqNo | Long | 요청번호 |
-| resultCnt | Int | 완료데이터 갯수 |
+| resultCnt | Int | 완료데이터 개수 |
 | resultDate | String | 완료일자 |
-| resultEncrytData | String | 암호화된 휴페업정보데이터 |
+| resultEncrytData | String | 암호화된 휴폐업정보데이터 |
 
 resultEncrytData 해당 데이터의 URLDecoder 처리 후, AES256 복호화 처리
 
 ```
-[{"bno":"1234567890","bnoCd":"01","bnoCont":"부가가치세 일반과세자 입니다.","bnoDate":"2015-11-11 10:10:10"}
-,{"bno":"1234567890","bnoCd":"01","bnoCont":"부가가치세 일반과세자 입니다.","bnoDate":"2015-11-11 10:10:10"}
-,{"bno":"1234567890","bnoCd":"01","bnoCont":"부가가치세 일반과세자 입니다.","bnoDate":"2015-11-10 10:10:10"}]
+[
+    {
+        "bno": "1234567890",
+        "bnoCd": "01",
+        "bnoCont": "부가가치세 일반과세자 입니다.",
+        "bnoDate": "2015-11-11 10:10:10"
+    },
+    {
+        "bno": "1234567890",
+        "bnoCd": "01",
+        "bnoCont": "부가가치세 일반과세자 입니다.",
+        "bnoDate": "2015-11-11 10:10:10"
+    },
+    {
+        "bno": "1234567890",
+        "bnoCd": "01",
+        "bnoCont": "부가가치세 일반과세자 입니다.",
+        "bnoDate": "2015-11-10 10:10:10"
+    }
+]
 ```
 
 | 이름 | 타입 | 설명 |
@@ -296,13 +304,13 @@ resultEncrytData 해당 데이터의 URLDecoder 처리 후, AES256 복호화 처
 | bnoCd | String | 결과코드 |
 | bnoCont | String | 조회결과 |
 | bnoDate | String | 조회날짜 |
-| custNm | String | 거래처명 (scn이 Y인 경우만 포함됨) |
+| custNm | String | 거래처명(scn이 Y인 경우만 포함됨) |
 
 ---
 
-## 거래처 휴/페업 최근 요청중인 요청번호 확인
+## 거래처 휴/폐업 최근 요청중인 요청번호 확인
 
-가장 최근에 요청한 휴/페업 정보 조회의 요청번호를 확인합니다.
+가장 최근에 요청한 휴/폐업 정보 조회의 요청번호를 확인합니다.
 
 ### 요청
 
@@ -332,10 +340,12 @@ https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/1sdaf3rs34d2/re
   <summary><strong>예시 코드</strong></summary>
 
 ```
-{"custNo":1
-,"crtKey":"qaz!@wsx"}
+{
+    "custNo": 1,
+    "crtKey": "qaz!@wsx"
+}
 
-Json데이터를 AES256 암호화 처리후, URLEncoder(UTF-8) 처리된 데이터
+JSON 데이터를 AES256 암호화 처리 후, URLEncoder(UTF-8) 처리된 데이터
 3Tm2TS3ynvXw3jcgh1SzQcMIBA2EIRp%2FheQSAsWSXHTP0TODL%2FYEL1Iml3Qn1CWn
 ```
 
@@ -343,8 +353,8 @@ Json데이터를 AES256 암호화 처리후, URLEncoder(UTF-8) 처리된 데이�
 
 | 이름 | 타입 | 필수 | 설명 |
 | --- | --- | --- | --- |
-| custNo | Long | Y | 고객번호 (Console 페이지 내 있음) |
-| crtKey | String | Y | 고객인증키 (Console 페이지 내 있음) |
+| custNo | Long | Y | 고객번호(Console 페이지 내 있음) |
+| crtKey | String | Y | 고객인증키(Console 페이지 내 있음) |
 
 ### 응답
 
@@ -374,9 +384,9 @@ Json데이터를 AES256 암호화 처리후, URLEncoder(UTF-8) 처리된 데이�
 
 ---
 
-## 거래처 휴/페업 최근 일주일내 요청내역 확인
+## 거래처 휴/폐업 최근 일주일내 요청내역 확인
 
-최근 일주일 내 휴/페업 정보 조회 요청 내역 목록을 조회합니다.
+최근 일주일 내 휴/폐업 정보 조회 요청 내역 목록을 조회합니다.
 
 ### 요청
 
@@ -406,10 +416,12 @@ https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/1sdaf3rs34d2/re
   <summary><strong>예시 코드</strong></summary>
 
 ```
-{"custNo":1
-,"crtKey":"qaz!@wsx"}
+{
+    "custNo": 1,
+    "crtKey": "qaz!@wsx"
+}
 
-Json데이터를 AES256 암호화 처리후, URLEncoder(UTF-8) 처리된 데이터
+JSON 데이터를 AES256 암호화 처리 후, URLEncoder(UTF-8) 처리된 데이터
 3Tm2TS3ynvXw3jcgh1SzQcMIBA2EIRp%2FheQSAsWSXHTP0TODL%2FYEL1Iml3Qn1CWn
 ```
 
@@ -417,8 +429,8 @@ Json데이터를 AES256 암호화 처리후, URLEncoder(UTF-8) 처리된 데이�
 
 | 이름 | 타입 | 필수 | 설명 |
 | --- | --- | --- | --- |
-| custNo | Long | Y | 고객번호 (Console 페이지 내 있음) |
-| crtKey | String | Y | 고객인증키 (Console 페이지 내 있음) |
+| custNo | Long | Y | 고객번호(Console 페이지 내 있음) |
+| crtKey | String | Y | 고객인증키(Console 페이지 내 있음) |
 
 ### 응답
 
@@ -434,8 +446,20 @@ Json데이터를 AES256 암호화 처리후, URLEncoder(UTF-8) 처리된 데이�
     },
     "data": {
         "reqList": [
-            {"reqNo":68,"reqStatCd":"REQUEST","reqYmdt":"2015-10-10 10:10:10","trtYmdt":"","reqCnt":20},
-            {"reqNo":69,"reqStatCd":"COMPLETE","reqYmdt":"2015-10-10 10:10:10","trtYmdt":"2015-10-12 10:10:10","reqCnt":20}
+            {
+                "reqNo": 68,
+                "reqStatCd": "REQUEST",
+                "reqYmdt": "2015-10-10 10:10:10",
+                "trtYmdt": "",
+                "reqCnt": 20
+            },
+            {
+                "reqNo": 69,
+                "reqStatCd": "COMPLETE",
+                "reqYmdt": "2015-10-10 10:10:10",
+                "trtYmdt": "2015-10-12 10:10:10",
+                "reqCnt": 20
+            }
         ]
     }
 }
@@ -449,7 +473,7 @@ Json데이터를 AES256 암호화 처리후, URLEncoder(UTF-8) 처리된 데이�
 | reqStatCd | String | 요청상태 |
 | reqYmdt | String | 요청일시 |
 | trtYmdt | String | 결과일시 |
-| reqCnt | Int | 요청갯수 |
+| reqCnt | Int | 요청개수 |
 
 ---
 

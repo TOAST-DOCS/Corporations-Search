@@ -1,4 +1,4 @@
-## Corporation Search APIガイド
+# Corporation Search APIガイド
 
 **Search > Corporation Search > Corporation Search APIガイド**
 
@@ -12,37 +12,24 @@ Appkeyは、NHN Cloudの各サービスごとに発行される固有の認証�
 
 Appkey及びSecretKeyの確認及び使用に関する詳細は、[Appkey](/nhncloud/ja/public-api/appkey)を参照してください。
 
-### 応答共通情報
-
-<details>
-  <summary><strong>成功応答</strong></summary>
+## エラーコード
 
 | 応答コード | 説明 |
 | --- | --- |
 | 0 | 成功 |
-
-</details>
-
-<details>
-  <summary><strong>失敗応答</strong></summary>
-
-| 応答コード | 説明                                   |
-|-------|--------------------------------------|
-| -1002 | JSON規格エラー                            |
-| -1003 | 復号化およびその他エラー                         |
+| -1002 | JSON規格エラー |
+| -1003 | 復号化およびその他エラー |
 | -1006 | 該当アプリケーションキー(Appkey)で登録されたユーザーがいません。 |
-| -1008 | 指定した日付形式が無効です。                       |
-| -1201 | 要請した取引先がありません。                       |
-| -1202 | 認証されたユーザーではありません。                    
-| -1203 | 事業者照会中です。                            |
-| -1204 | 要請された履歴がありません。                       |
-| -1205 | 無効な要請番号です。                           |
-| -1206 | 無効な事業者番号()です。                        |
-| -1207 | 存在しない要請番号です。                         |
-| -1208 | 過去7日間の要請履歴がありません。                    |
-| -1209 | 該当日時はすでにスクレイピングが完了しました。              |
-
-</details>
+| -1008 | 指定した日付形式が無効です。 |
+| -1201 | 要請した取引先がありません。 |
+| -1202 | 認証されたユーザーではありません。 |
+| -1203 | 事業者照会中です。 |
+| -1204 | 要請された履歴がありません。 |
+| -1205 | 無効な要請番号です。 |
+| -1206 | 無効な事業者番号です。 |
+| -1207 | 存在しない要請番号です。 |
+| -1208 | 過去7日間の要請履歴がありません。 |
+| -1209 | 該当日時はすでにスクレイピングが完了しました。 |
 
 ---
 
@@ -80,9 +67,9 @@ https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/1sdaf3rs34d2/re
 
 ```
 {
-    "custNo":1
-,"crtKey":"qaz!@wsx"
-,"bnoList":["1234567890","0123456789","9012345678"]
+    "custNo": 1,
+    "crtKey": "qaz!@wsx",
+    "bnoList": ["1234567890", "0123456789", "9012345678"]
 }
 
 JSONデータをAES256暗号化処理後、URLEncoder(UTF-8)処理されたデータ
@@ -159,9 +146,11 @@ https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/1sdaf3rs34d2/ve
   <summary><strong>サンプルコード</strong></summary>
 
 ```
-{"custNo":1
-,"crtKey":"qaz!@wsx"
-,"reqNo":58}
+{
+    "custNo": 1,
+    "crtKey": "qaz!@wsx",
+    "reqNo": 58
+}
 
 JSONデータをAES256暗号化処理後、URLEncoder(UTF-8)処理されたデータ
 TSNRsStai0hQUM5m40dyDxIJsW5TON7QqVYjjhCIjBUKbMFqmiM1xZ8ND5%2Buo5xd
@@ -235,9 +224,11 @@ https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/1sdaf3rs34d2/re
   <summary><strong>サンプルコード</strong></summary>
 
 ```
-{"custNo":1
-,"crtKey":"qaz!@wsx"
-,"reqNo":58}
+{
+    "custNo": 1,
+    "crtKey": "qaz!@wsx",
+    "reqNo": 58
+}
 
 JSONデータをAES256暗号化処理後、URLEncoder(UTF-8)処理されたデータ
 TSNRsStai0hQUM5m40dyDxIJsW5TON7QqVYjjhCIjBUKbMFqmiM1xZ8ND5%2Buo5xd
@@ -285,9 +276,26 @@ TSNRsStai0hQUM5m40dyDxIJsW5TON7QqVYjjhCIjBUKbMFqmiM1xZ8ND5%2Buo5xd
 resultEncrytData該当データのURLDecoder処理後、AES256復号化処理
 
 ```
-[{"bno":"1234567890","bnoCd":"01","bnoCont":"付加価値税一般課税者です。","bnoDate":"2015-11-11 10:10:10"}
-,{"bno":"1234567890","bnoCd":"01","bnoCont":"付加価値税一般課税者です。","bnoDate":"2015-11-11 10:10:10"}
-,{"bno":"1234567890","bnoCd":"01","bnoCont":"付加価値税一般課税者です。","bnoDate":"2015-11-10 10:10:10"}]
+[
+    {
+        "bno": "1234567890",
+        "bnoCd": "01",
+        "bnoCont": "付加価値税一般課税者です。",
+        "bnoDate": "2015-11-11 10:10:10"
+    },
+    {
+        "bno": "1234567890",
+        "bnoCd": "01",
+        "bnoCont": "付加価値税一般課税者です。",
+        "bnoDate": "2015-11-11 10:10:10"
+    },
+    {
+        "bno": "1234567890",
+        "bnoCd": "01",
+        "bnoCont": "付加価値税一般課税者です。",
+        "bnoDate": "2015-11-10 10:10:10"
+    }
+]
 ```
 
 | 名前 | データ型 | 説明 |
@@ -332,8 +340,10 @@ https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/1sdaf3rs34d2/re
   <summary><strong>サンプルコード</strong></summary>
 
 ```
-{"custNo":1
-,"crtKey":"qaz!@wsx"}
+{
+    "custNo": 1,
+    "crtKey": "qaz!@wsx"
+}
 
 JSONデータをAES256暗号化処理後、URLEncoder(UTF-8)処理されたデータ
 3Tm2TS3ynvXw3jcgh1SzQcMIBA2EIRp%2FheQSAsWSXHTP0TODL%2FYEL1Iml3Qn1CWn
@@ -406,8 +416,10 @@ https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/1sdaf3rs34d2/re
   <summary><strong>サンプルコード</strong></summary>
 
 ```
-{"custNo":1
-,"crtKey":"qaz!@wsx"}
+{
+    "custNo": 1,
+    "crtKey": "qaz!@wsx"
+}
 
 JSONデータをAES256暗号化処理後、URLEncoder(UTF-8)処理されたデータ
 3Tm2TS3ynvXw3jcgh1SzQcMIBA2EIRp%2FheQSAsWSXHTP0TODL%2FYEL1Iml3Qn1CWn
@@ -434,8 +446,20 @@ JSONデータをAES256暗号化処理後、URLEncoder(UTF-8)処理されたデ�
     },
     "data": {
         "reqList": [
-            {"reqNo":68,"reqStatCd":"REQUEST","reqYmdt":"2015-10-10 10:10:10","trtYmdt":"","reqCnt":20},
-            {"reqNo":69,"reqStatCd":"COMPLETE","reqYmdt":"2015-10-10 10:10:10","trtYmdt":"2015-10-12 10:10:10","reqCnt":20}
+            {
+                "reqNo": 68,
+                "reqStatCd": "REQUEST",
+                "reqYmdt": "2015-10-10 10:10:10",
+                "trtYmdt": "",
+                "reqCnt": 20
+            },
+            {
+                "reqNo": 69,
+                "reqStatCd": "COMPLETE",
+                "reqYmdt": "2015-10-10 10:10:10",
+                "trtYmdt": "2015-10-12 10:10:10",
+                "reqCnt": 20
+            }
         ]
     }
 }

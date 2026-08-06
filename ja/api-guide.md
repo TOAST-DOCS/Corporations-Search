@@ -1,10 +1,14 @@
+<!-- pre-align:aligned sig=3d0b8c13d888 -->
+
 # Corporation Search APIガイド
 
 **Search > Corporation Search > Corporation Search APIガイド**
 
-## Corporation Search API共通情報
+<a id="corporation-search-api-common-information"></a>
+## Corporation Search API共通情報 { #corporation-search-api-common-information }
 
-### 認証および権限
+<a id="authentication-and-authorization"></a>
+### 認証および権限 { #authentication-and-authorization }
 
 Corporation Search APIを使用するには、AppkeyとSecretKeyが必要です。
 
@@ -12,7 +16,8 @@ Appkeyは、NHN Cloudの各サービスごとに発行される固有の認証�
 
 Appkey及びSecretKeyの確認及び使用に関する詳細は、[Appkey](/nhncloud/ja/public-api/appkey)を参照してください。
 
-## エラーコード
+<a id="error-codes"></a>
+## エラーコード { #error-codes }
 
 | 応答コード | 説明 |
 | --- | --- |
@@ -33,18 +38,21 @@ Appkey及びSecretKeyの確認及び使用に関する詳細は、[Appkey](/nhnc
 
 ---
 
-## 取引先の休廃業要請
+<a id="request-for-query-of-business-closurecessation"></a>
+## 取引先の休廃業要請 { #request-for-query-of-business-closurecessation }
 
 事業者登録番号リストに対する休廃業情報の照会を要請します。
 
-### リクエスト
+<a id="request"></a>
+### リクエスト { #request }
 
 ```
 POST /scraping/v1.0/appkeys/{appkey}/requests?p={param}
 Content-Type: application/x-www-form-urlencoded
 ```
 
-### リクエストパラメータ
+<a id="request-parameters"></a>
+### リクエストパラメータ { #request-parameters }
 
 <details>
   <summary><strong>サンプルURL</strong></summary>
@@ -60,7 +68,8 @@ https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/1sdaf3rs34d2/re
 | appkey | URL | String | Y | アプリケーションキー(AppKey) |
 | p | URL | String | Y | 暗号化されたリクエスト本文パラメータ(request body parameter) |
 
-### リクエスト本文
+<a id="request-body"></a>
+### リクエスト本文 { #request-body }
 
 <details>
   <summary><strong>サンプルコード</strong></summary>
@@ -84,7 +93,8 @@ rteo7fjjhGlVznybl239YSngEb2Y3VHOSJaM12AGasdyI1Y0pclSFnPo8uD8eHLFJ41AigDRpsXW36aB
 | crtKey | String | Y | 顧客認証キー(NHN Cloud Consoleページ内にある) |
 | bnoList | String | Y | 事業者登録番号(複数可能) |
 
-### レスポンス
+<a id="response"></a>
+### レスポンス { #response }
 
 <details>
   <summary><strong>サンプルコード</strong></summary>
@@ -114,17 +124,20 @@ rteo7fjjhGlVznybl239YSngEb2Y3VHOSJaM12AGasdyI1Y0pclSFnPo8uD8eHLFJ41AigDRpsXW36aB
 
 ---
 
-## 取引先の休廃業要請状態の確認
+<a id="check-status-of-request-for-query-of-business-closurecessation"></a>
+## 取引先の休廃業要請状態の確認 { #check-status-of-request-for-query-of-business-closurecessation }
 
 要請した休廃業情報照会作業の処理状態を確認します。
 
-### リクエスト
+<a id="check-status-of-request-for-query-of-business-closurecessation-request"></a>
+### リクエスト { #check-status-of-request-for-query-of-business-closurecessation-request }
 
 ```
 GET /scraping/v1.0/appkeys/{appkey}/verification?p={param}
 ```
 
-### リクエストパラメータ
+<a id="check-status-of-request-for-query-of-business-closurecessation-request-parameters"></a>
+### リクエストパラメータ { #check-status-of-request-for-query-of-business-closurecessation-request-parameters }
 
 <details>
   <summary><strong>サンプルURL</strong></summary>
@@ -140,7 +153,8 @@ https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/1sdaf3rs34d2/ve
 | appkey | URL | String | Y | アプリケーションキー(AppKey) |
 | p | URL | String | Y | 暗号化されたリクエスト本文パラメータ(request body parameter) |
 
-### リクエスト本文
+<a id="check-status-of-request-for-query-of-business-closurecessation-request-body"></a>
+### リクエスト本文 { #check-status-of-request-for-query-of-business-closurecessation-request-body }
 
 <details>
   <summary><strong>サンプルコード</strong></summary>
@@ -164,7 +178,8 @@ TSNRsStai0hQUM5m40dyDxIJsW5TON7QqVYjjhCIjBUKbMFqmiM1xZ8ND5%2Buo5xd
 | crtKey | String | Y | 顧客認証キー(NHN Cloud Consoleページ内にある) |
 | reqNo | Long | Y | 要請番号 |
 
-### レスポンス
+<a id="check-status-of-request-for-query-of-business-closurecessation-response"></a>
+### レスポンス { #check-status-of-request-for-query-of-business-closurecessation-response }
 
 <details>
   <summary><strong>サンプルコード</strong></summary>
@@ -192,17 +207,20 @@ TSNRsStai0hQUM5m40dyDxIJsW5TON7QqVYjjhCIjBUKbMFqmiM1xZ8ND5%2Buo5xd
 
 ---
 
-## 取引先の休廃業要請結果データを受け取る
+<a id="receive-result-of-request-for-query-of-business-closurecessation"></a>
+## 取引先の休廃業要請結果データを受け取る { #receive-result-of-request-for-query-of-business-closurecessation }
 
 要請した休廃業情報照会の結果データを照会します。
 
-### リクエスト
+<a id="receive-result-of-request-for-query-of-business-closurecessation-request"></a>
+### リクエスト { #receive-result-of-request-for-query-of-business-closurecessation-request }
 
 ```
 GET /scraping/v1.0/appkeys/{appkey}/results?p={param}
 ```
 
-### リクエストパラメータ
+<a id="receive-result-of-request-for-query-of-business-closurecessation-request-parameters"></a>
+### リクエストパラメータ { #receive-result-of-request-for-query-of-business-closurecessation-request-parameters }
 
 <details>
   <summary><strong>サンプルURL</strong></summary>
@@ -218,7 +236,8 @@ https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/1sdaf3rs34d2/re
 | appkey | URL | String | Y | アプリケーションキー(AppKey) |
 | p | URL | String | Y | 暗号化されたリクエスト本文パラメータ(request body parameter) |
 
-### リクエスト本文
+<a id="receive-result-of-request-for-query-of-business-closurecessation-request-body"></a>
+### リクエスト本文 { #receive-result-of-request-for-query-of-business-closurecessation-request-body }
 
 <details>
   <summary><strong>サンプルコード</strong></summary>
@@ -243,7 +262,8 @@ TSNRsStai0hQUM5m40dyDxIJsW5TON7QqVYjjhCIjBUKbMFqmiM1xZ8ND5%2Buo5xd
 | reqNo | Long | Y | 要請番号 |
 | scn | String [Y,N] | N | 取引先名の照会フラグ |
 
-### レスポンス
+<a id="receive-result-of-request-for-query-of-business-closurecessation-response"></a>
+### レスポンス { #receive-result-of-request-for-query-of-business-closurecessation-response }
 
 <details>
   <summary><strong>サンプルコード</strong></summary>
@@ -308,17 +328,20 @@ resultEncrytData該当データのURLDecoder処理後、AES256復号化処理
 
 ---
 
-## 取引先の休廃業直近で要請中の要請番号を確認
+<a id="check-recent-request-number-for-query-of-business-closurecessation"></a>
+## 取引先の休廃業直近で要請中の要請番号を確認 { #check-recent-request-number-for-query-of-business-closurecessation }
 
 直近で要請した休廃業情報照会の要請番号を確認します。
 
-### リクエスト
+<a id="check-recent-request-number-for-query-of-business-closurecessation-request"></a>
+### リクエスト { #check-recent-request-number-for-query-of-business-closurecessation-request }
 
 ```
 GET /scraping/v1.0/appkeys/{appkey}/recent?p={param}
 ```
 
-### リクエストパラメータ
+<a id="check-recent-request-number-for-query-of-business-closurecessation-request-parameters"></a>
+### リクエストパラメータ { #check-recent-request-number-for-query-of-business-closurecessation-request-parameters }
 
 <details>
   <summary><strong>サンプルURL</strong></summary>
@@ -334,7 +357,8 @@ https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/1sdaf3rs34d2/re
 | appkey | URL | String | Y | アプリケーションキー(AppKey) |
 | p | URL | String | Y | 暗号化されたリクエスト本文パラメータ(request body parameter) |
 
-### リクエスト本文
+<a id="check-recent-request-number-for-query-of-business-closurecessation-request-body"></a>
+### リクエスト本文 { #check-recent-request-number-for-query-of-business-closurecessation-request-body }
 
 <details>
   <summary><strong>サンプルコード</strong></summary>
@@ -356,7 +380,8 @@ JSONデータをAES256暗号化処理後、URLEncoder(UTF-8)処理されたデ�
 | custNo | Long | Y | 顧客番号(NHN Cloud Consoleページ内にある) |
 | crtKey | String | Y | 顧客認証キー(NHN Cloud Consoleページ内にある) |
 
-### レスポンス
+<a id="check-recent-request-number-for-query-of-business-closurecessation-response"></a>
+### レスポンス { #check-recent-request-number-for-query-of-business-closurecessation-response }
 
 <details>
   <summary><strong>サンプルコード</strong></summary>
@@ -384,17 +409,20 @@ JSONデータをAES256暗号化処理後、URLEncoder(UTF-8)処理されたデ�
 
 ---
 
-## 取引先の休廃業の一週間以内の要請内容を確認
+<a id="check-requests-of-recent-1-week-for-query-of-business-closurecessation"></a>
+## 取引先の休廃業の一週間以内の要請内容を確認 { #check-requests-of-recent-1-week-for-query-of-business-closurecessation }
 
 直近一週間以内の休廃業情報照会要請内容のリストを照会します。
 
-### リクエスト
+<a id="check-requests-of-recent-1-week-for-query-of-business-closurecessation-request"></a>
+### リクエスト { #check-requests-of-recent-1-week-for-query-of-business-closurecessation-request }
 
 ```
 GET /scraping/v1.0/appkeys/{appkey}/reqlists?p={param}
 ```
 
-### リクエストパラメータ
+<a id="check-requests-of-recent-1-week-for-query-of-business-closurecessation-request-parameters"></a>
+### リクエストパラメータ { #check-requests-of-recent-1-week-for-query-of-business-closurecessation-request-parameters }
 
 <details>
   <summary><strong>サンプルURL</strong></summary>
@@ -410,7 +438,8 @@ https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/1sdaf3rs34d2/re
 | appkey | URL | String | Y | アプリケーションキー(AppKey) |
 | p | URL | String | Y | 暗号化されたリクエスト本文パラメータ(request body parameter) |
 
-### リクエスト本文
+<a id="check-requests-of-recent-1-week-for-query-of-business-closurecessation-request-body"></a>
+### リクエスト本文 { #check-requests-of-recent-1-week-for-query-of-business-closurecessation-request-body }
 
 <details>
   <summary><strong>サンプルコード</strong></summary>
@@ -432,7 +461,8 @@ JSONデータをAES256暗号化処理後、URLEncoder(UTF-8)処理されたデ�
 | custNo | Long | Y | 顧客番号(NHN Cloud Consoleページ内にある) |
 | crtKey | String | Y | 顧客認証キー(NHN Cloud Consoleページ内にある) |
 
-### レスポンス
+<a id="check-requests-of-recent-1-week-for-query-of-business-closurecessation-response"></a>
+### レスポンス { #check-requests-of-recent-1-week-for-query-of-business-closurecessation-response }
 
 <details>
   <summary><strong>サンプルコード</strong></summary>
@@ -477,9 +507,11 @@ JSONデータをAES256暗号化処理後、URLEncoder(UTF-8)処理されたデ�
 
 ---
 
-## 参考事項
+<a id="references"></a>
+## 参考事項 { #references }
 
-### 結果照会コード表
+<a id="table-of-query-result-codes"></a>
+### 結果照会コード表 { #table-of-query-result-codes }
 
 | コード値 | 結果値 |
 | --- | --- |
@@ -492,7 +524,8 @@ JSONデータをAES256暗号化処理後、URLEncoder(UTF-8)処理されたデ�
 | 06 | 廃業者 |
 | 09 | その他 |
 
-### AES 256暗号化
+<a id="aes-256-encryption"></a>
+### AES 256暗号化 { #aes-256-encryption }
 
 > 暗号化モジュール開発時、CBC、パディングはPKCS5Paddingを使用
 > [Example]

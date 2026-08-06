@@ -1,16 +1,21 @@
+<!-- pre-align:aligned sig=3d0b8c13d888 -->
+
 # Corporation Search API Guide
 
 **Search > Corporation Search > Corporation Search API Guide**
 
-## Corporation Search API Common Information
+<a id="corporation-search-api-common-information"></a>
+## Corporation Search API Common Information { #corporation-search-api-common-information }
 
-### Authentication and Authorization
+<a id="authentication-and-authorization"></a>
+### Authentication and Authorization { #authentication-and-authorization }
 
 AppKey and SecretKey are required to use the Corporation Search API.
 
 An Appkey is a unique authentication key issued for each NHN Cloud service, used to identify the service and validate API requests. A SecretKey is a private key used to control access to the API. For more information on checking and using Appkeys, please refer to the [Appkey](/nhncloud/en/public-api/appkey).
 
-## Error Codes
+<a id="error-codes"></a>
+## Error Codes { #error-codes }
 
 | Response Code | Description |
 | --- | --- |
@@ -31,18 +36,21 @@ An Appkey is a unique authentication key issued for each NHN Cloud service, used
 
 ---
 
-## Request for Query of Business Closure/Cessation
+<a id="request-for-query-of-business-closurecessation"></a>
+## Request for Query of Business Closure/Cessation { #request-for-query-of-business-closurecessation }
 
 Requests a query of business closure/cessation information for a list of business registration numbers.
 
-### Request
+<a id="request"></a>
+### Request { #request }
 
 ```
 POST /scraping/v1.0/appkeys/{appkey}/requests?p={param}
 Content-Type: application/x-www-form-urlencoded
 ```
 
-### Request Parameters
+<a id="request-parameters"></a>
+### Request Parameters { #request-parameters }
 
 <details>
   <summary><strong>Example URL</strong></summary>
@@ -58,7 +66,8 @@ https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/1sdaf3rs34d2/re
 | appkey | URL | String | Y | AppKey |
 | p | URL | String | Y | Encrypted request body parameter |
 
-### Request Body
+<a id="request-body"></a>
+### Request Body { #request-body }
 
 <details>
   <summary><strong>Example Code</strong></summary>
@@ -82,7 +91,8 @@ rteo7fjjhGlVznybl239YSngEb2Y3VHOSJaM12AGasdyI1Y0pclSFnPo8uD8eHLFJ41AigDRpsXW36aB
 | crtKey | String | Y | Client authentication key (available on NHN Cloud Console) |
 | bnoList | String | Y | Business registration number (one or many) |
 
-### Response
+<a id="response"></a>
+### Response { #response }
 
 <details>
   <summary><strong>Example Code</strong></summary>
@@ -112,17 +122,20 @@ rteo7fjjhGlVznybl239YSngEb2Y3VHOSJaM12AGasdyI1Y0pclSFnPo8uD8eHLFJ41AigDRpsXW36aB
 
 ---
 
-## Check Status of Request for Query of Business Closure/Cessation
+<a id="check-status-of-request-for-query-of-business-closurecessation"></a>
+## Check Status of Request for Query of Business Closure/Cessation { #check-status-of-request-for-query-of-business-closurecessation }
 
 Checks the processing status of the requested business closure/cessation query.
 
-### Request
+<a id="check-status-of-request-for-query-of-business-closurecessation-request"></a>
+### Request { #check-status-of-request-for-query-of-business-closurecessation-request }
 
 ```
 GET /scraping/v1.0/appkeys/{appkey}/verification?p={param}
 ```
 
-### Request Parameters
+<a id="check-status-of-request-for-query-of-business-closurecessation-request-parameters"></a>
+### Request Parameters { #check-status-of-request-for-query-of-business-closurecessation-request-parameters }
 
 <details>
   <summary><strong>Example URL</strong></summary>
@@ -138,7 +151,8 @@ https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/1sdaf3rs34d2/ve
 | appkey | URL | String | Y | AppKey |
 | p | URL | String | Y | Encrypted request body parameter |
 
-### Request Body
+<a id="check-status-of-request-for-query-of-business-closurecessation-request-body"></a>
+### Request Body { #check-status-of-request-for-query-of-business-closurecessation-request-body }
 
 <details>
   <summary><strong>Example Code</strong></summary>
@@ -162,7 +176,8 @@ TSNRsStai0hQUM5m40dyDxIJsW5TON7QqVYjjhCIjBUKbMFqmiM1xZ8ND5%2Buo5xd
 | crtKey | String | Y | Client authentication key (available on NHN Cloud Console) |
 | reqNo | Long | Y | Request number |
 
-### Response
+<a id="check-status-of-request-for-query-of-business-closurecessation-response"></a>
+### Response { #check-status-of-request-for-query-of-business-closurecessation-response }
 
 <details>
   <summary><strong>Example Code</strong></summary>
@@ -190,17 +205,20 @@ TSNRsStai0hQUM5m40dyDxIJsW5TON7QqVYjjhCIjBUKbMFqmiM1xZ8ND5%2Buo5xd
 
 ---
 
-## Receive Result of Request for Query of Business Closure/Cessation
+<a id="receive-result-of-request-for-query-of-business-closurecessation"></a>
+## Receive Result of Request for Query of Business Closure/Cessation { #receive-result-of-request-for-query-of-business-closurecessation }
 
 Receives the result data of the requested business closure/cessation query.
 
-### Request
+<a id="receive-result-of-request-for-query-of-business-closurecessation-request"></a>
+### Request { #receive-result-of-request-for-query-of-business-closurecessation-request }
 
 ```
 GET /scraping/v1.0/appkeys/{appkey}/results?p={param}
 ```
 
-### Request Parameters
+<a id="receive-result-of-request-for-query-of-business-closurecessation-request-parameters"></a>
+### Request Parameters { #receive-result-of-request-for-query-of-business-closurecessation-request-parameters }
 
 <details>
   <summary><strong>Example URL</strong></summary>
@@ -216,7 +234,8 @@ https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/1sdaf3rs34d2/re
 | appkey | URL | String | Y | AppKey |
 | p | URL | String | Y | Encrypted request body parameter |
 
-### Request Body
+<a id="receive-result-of-request-for-query-of-business-closurecessation-request-body"></a>
+### Request Body { #receive-result-of-request-for-query-of-business-closurecessation-request-body }
 
 <details>
   <summary><strong>Example Code</strong></summary>
@@ -241,7 +260,8 @@ TSNRsStai0hQUM5m40dyDxIJsW5TON7QqVYjjhCIjBUKbMFqmiM1xZ8ND5%2Buo5xd
 | reqNo | Long | Y | Request number |
 | scn | String [Y,N] | N | Query flag of business name |
 
-### Response
+<a id="receive-result-of-request-for-query-of-business-closurecessation-response"></a>
+### Response { #receive-result-of-request-for-query-of-business-closurecessation-response }
 
 <details>
   <summary><strong>Example Code</strong></summary>
@@ -306,17 +326,20 @@ Process URLDecoder of corresponding resultEncrytData, and decrypt AES256.
 
 ---
 
-## Check Recent Request Number for Query of Business Closure/Cessation
+<a id="check-recent-request-number-for-query-of-business-closurecessation"></a>
+## Check Recent Request Number for Query of Business Closure/Cessation { #check-recent-request-number-for-query-of-business-closurecessation }
 
 Checks the most recent request number for business closure/cessation query.
 
-### Request
+<a id="check-recent-request-number-for-query-of-business-closurecessation-request"></a>
+### Request { #check-recent-request-number-for-query-of-business-closurecessation-request }
 
 ```
 GET /scraping/v1.0/appkeys/{appkey}/recent?p={param}
 ```
 
-### Request Parameters
+<a id="check-recent-request-number-for-query-of-business-closurecessation-request-parameters"></a>
+### Request Parameters { #check-recent-request-number-for-query-of-business-closurecessation-request-parameters }
 
 <details>
   <summary><strong>Example URL</strong></summary>
@@ -332,7 +355,8 @@ https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/1sdaf3rs34d2/re
 | appkey | URL | String | Y | AppKey |
 | p | URL | String | Y | Encrypted request body parameter |
 
-### Request Body
+<a id="check-recent-request-number-for-query-of-business-closurecessation-request-body"></a>
+### Request Body { #check-recent-request-number-for-query-of-business-closurecessation-request-body }
 
 <details>
   <summary><strong>Example Code</strong></summary>
@@ -354,7 +378,8 @@ Encrypt JSON data in AES256 and process as URLEncoder(UTF-8)
 | custNo | Long | Y | Client number (available on NHN Cloud Console) |
 | crtKey | String | Y | Client authentication key (available on NHN Cloud Console) |
 
-### Response
+<a id="check-recent-request-number-for-query-of-business-closurecessation-response"></a>
+### Response { #check-recent-request-number-for-query-of-business-closurecessation-response }
 
 <details>
   <summary><strong>Example Code</strong></summary>
@@ -382,17 +407,20 @@ Encrypt JSON data in AES256 and process as URLEncoder(UTF-8)
 
 ---
 
-## Check Requests of Recent 1 Week for Query of Business Closure/Cessation
+<a id="check-requests-of-recent-1-week-for-query-of-business-closurecessation"></a>
+## Check Requests of Recent 1 Week for Query of Business Closure/Cessation { #check-requests-of-recent-1-week-for-query-of-business-closurecessation }
 
 Retrieves the list of business closure/cessation query requests in the recent week.
 
-### Request
+<a id="check-requests-of-recent-1-week-for-query-of-business-closurecessation-request"></a>
+### Request { #check-requests-of-recent-1-week-for-query-of-business-closurecessation-request }
 
 ```
 GET /scraping/v1.0/appkeys/{appkey}/reqlists?p={param}
 ```
 
-### Request Parameters
+<a id="check-requests-of-recent-1-week-for-query-of-business-closurecessation-request-parameters"></a>
+### Request Parameters { #check-requests-of-recent-1-week-for-query-of-business-closurecessation-request-parameters }
 
 <details>
   <summary><strong>Example URL</strong></summary>
@@ -408,7 +436,8 @@ https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/1sdaf3rs34d2/re
 | appkey | URL | String | Y | AppKey |
 | p | URL | String | Y | Encrypted request body parameter |
 
-### Request Body
+<a id="check-requests-of-recent-1-week-for-query-of-business-closurecessation-request-body"></a>
+### Request Body { #check-requests-of-recent-1-week-for-query-of-business-closurecessation-request-body }
 
 <details>
   <summary><strong>Example Code</strong></summary>
@@ -430,7 +459,8 @@ Encrypt JSON data in AES256 and process as URLEncoder(UTF-8)
 | custNo | Long | Y | Client number (available on NHN Cloud Console) |
 | crtKey | String | Y | Client authentication key (available on NHN Cloud Console) |
 
-### Response
+<a id="check-requests-of-recent-1-week-for-query-of-business-closurecessation-response"></a>
+### Response { #check-requests-of-recent-1-week-for-query-of-business-closurecessation-response }
 
 <details>
   <summary><strong>Example Code</strong></summary>
@@ -475,9 +505,11 @@ Encrypt JSON data in AES256 and process as URLEncoder(UTF-8)
 
 ---
 
-## References
+<a id="references"></a>
+## References { #references }
 
-### Table of Query Result Codes
+<a id="table-of-query-result-codes"></a>
+### Table of Query Result Codes { #table-of-query-result-codes }
 
 | Code | Result |
 | --- | --- |
@@ -490,7 +522,8 @@ Encrypt JSON data in AES256 and process as URLEncoder(UTF-8)
 | 06 | Closed business owner |
 | 09 | Others |
 
-### AES 256 Encryption
+<a id="aes-256-encryption"></a>
+### AES 256 Encryption { #aes-256-encryption }
 
 > Use CBC for the development of encryption module, or PKCS5Padding for padding.
 > [Example]

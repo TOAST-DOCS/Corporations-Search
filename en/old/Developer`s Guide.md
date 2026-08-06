@@ -1,11 +1,15 @@
-## Upcoming Products > Corporations Search > Developer's Guide 
+<!-- pre-align:aligned sig=b078a615f7b7 -->
+
+<a id="upcoming-products-corporations-search-developers-guide"></a>
+## Upcoming Products > Corporations Search > Developer's Guide { #upcoming-products-corporations-search-developers-guide }
 
 > ※ 본 문서는 alpha 개발 단계의 문서입니다.
 > 사용에 관심이 있으신 분은 **support@cloud.toast.com**으로 문의해 주시기 바랍니다.
 
 다음과 같은 API 호출을 통해 거래처 휴/폐업조회 서비스를 이용할 수 있습니다.
 
-## 거래처 휴/페업 요청
+<a id="section-1"></a>
+## 거래처 휴/페업 요청 { #section-1 }
 
 [URL]
 
@@ -71,7 +75,8 @@ https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/1sdaf3rs34d2/re
 |resultCnt|	int|	요청된 사업자등록번호 갯수|
 |reqDate|	String|	요청된 일시|
 
-## 거래처 휴/페업 요청 상태확인
+<a id="section-2"></a>
+## 거래처 휴/페업 요청 상태확인 { #section-2 }
 
 [URL]
 
@@ -135,7 +140,8 @@ https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/1sdaf3rs34d2/ve
 |reqNo|	long|	요청번호|
 |resultDate|	String|	완료일시|
 
-## 거래처 휴/페업 요청 결과데이터 받기
+<a id="section-3"></a>
+## 거래처 휴/페업 요청 결과데이터 받기 { #section-3 }
 
 [URL]
 
@@ -218,7 +224,8 @@ resultEncrytData 해당데이터의 URLDecoder 처리 후, AES256 복호화 처�
 |bnoCont|	String|	조회결과|
 |bnoDate|	String|	조회날자|
 
-## 거래처 휴/페업 최근 요청중인 요청번호 확인
+<a id="section-4"></a>
+## 거래처 휴/페업 최근 요청중인 요청번호 확인 { #section-4 }
 
 [URL]
 
@@ -280,7 +287,8 @@ https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/1sdaf3rs34d2/ve
 |recentReqNo|	long|	최근요청번호|
 |recentReqDate|	String|	최근요청일시|
 
-## 거래처 휴/페업 최근 일주일내 요청내역 확인
+<a id="section-5"></a>
+## 거래처 휴/페업 최근 일주일내 요청내역 확인 { #section-5 }
 
 [URL]
 

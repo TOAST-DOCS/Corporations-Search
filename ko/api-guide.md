@@ -1,10 +1,14 @@
+<!-- pre-align:aligned sig=3d0b8c13d888 -->
+
 # Corporation Search API 가이드
 
 **Search > Corporation Search > Corporation Search API 가이드**
 
-## Corporation Search API 공통 정보
+<a id="corporation-search-api-common-information"></a>
+## Corporation Search API 공통 정보 { #corporation-search-api-common-information }
 
-### 인증 및 권한
+<a id="authentication-and-authorization"></a>
+### 인증 및 권한 { #authentication-and-authorization }
 
 Corporation Search API를 사용하려면 Appkey와 SecretKey가 필요합니다.
 
@@ -12,7 +16,8 @@ Appkey는 NHN Cloud의 각 서비스별로 발급되는 고유 인증 키로 API
 
 Appkey 및 SecretKey 확인 및 사용에 대한 자세한 내용은 [Appkey](/nhncloud/ko/public-api/appkey)를 참고하세요.
 
-## 오류코드
+<a id="error-codes"></a>
+## 오류코드 { #error-codes }
 
 | 응답코드 | 설명 |
 | --- | --- |
@@ -33,18 +38,21 @@ Appkey 및 SecretKey 확인 및 사용에 대한 자세한 내용은 [Appkey](/n
 
 ---
 
-## 거래처 휴/폐업 요청
+<a id="request-for-query-of-business-closurecessation"></a>
+## 거래처 휴/폐업 요청 { #request-for-query-of-business-closurecessation }
 
 거래처 사업자등록번호 목록에 대한 휴/폐업 정보 조회를 요청합니다.
 
-### 요청
+<a id="request"></a>
+### 요청 { #request }
 
 ```
 POST /scraping/v1.0/appkeys/{appkey}/requests?p={param}
 Content-Type: application/x-www-form-urlencoded
 ```
 
-### 요청 파라미터
+<a id="request-parameters"></a>
+### 요청 파라미터 { #request-parameters }
 
 <details>
   <summary><strong>예시 URL</strong></summary>
@@ -60,7 +68,8 @@ https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/1sdaf3rs34d2/re
 | appkey | URL | String | Y | AppKey |
 | p | URL | String | Y | 암호화된 Request body Parameter |
 
-### 요청 본문
+<a id="request-body"></a>
+### 요청 본문 { #request-body }
 
 <details>
   <summary><strong>예시 코드</strong></summary>
@@ -84,7 +93,8 @@ rteo7fjjhGlVznybl239YSngEb2Y3VHOSJaM12AGasdyI1Y0pclSFnPo8uD8eHLFJ41AigDRpsXW36aB
 | crtKey | String | Y | 고객인증키(Console 페이지 내 있음) |
 | bnoList | String | Y | 사업자등록번호(복수 개 가능) |
 
-### 응답
+<a id="response"></a>
+### 응답 { #response }
 
 <details>
   <summary><strong>예시 코드</strong></summary>
@@ -114,17 +124,20 @@ rteo7fjjhGlVznybl239YSngEb2Y3VHOSJaM12AGasdyI1Y0pclSFnPo8uD8eHLFJ41AigDRpsXW36aB
 
 ---
 
-## 거래처 휴/폐업 요청 상태확인
+<a id="check-status-of-request-for-query-of-business-closurecessation"></a>
+## 거래처 휴/폐업 요청 상태확인 { #check-status-of-request-for-query-of-business-closurecessation }
 
 요청한 휴/폐업 정보 조회 작업의 처리 상태를 확인합니다.
 
-### 요청
+<a id="check-status-of-request-for-query-of-business-closurecessation-request"></a>
+### 요청 { #check-status-of-request-for-query-of-business-closurecessation-request }
 
 ```
 GET /scraping/v1.0/appkeys/{appkey}/verification?p={param}
 ```
 
-### 요청 파라미터
+<a id="check-status-of-request-for-query-of-business-closurecessation-request-parameters"></a>
+### 요청 파라미터 { #check-status-of-request-for-query-of-business-closurecessation-request-parameters }
 
 <details>
   <summary><strong>예시 URL</strong></summary>
@@ -140,7 +153,8 @@ https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/1sdaf3rs34d2/ve
 | appkey | URL | String | Y | AppKey |
 | p | URL | String | Y | 암호화된 Request body Parameter |
 
-### 요청 본문
+<a id="check-status-of-request-for-query-of-business-closurecessation-request-body"></a>
+### 요청 본문 { #check-status-of-request-for-query-of-business-closurecessation-request-body }
 
 <details>
   <summary><strong>예시 코드</strong></summary>
@@ -164,7 +178,8 @@ TSNRsStai0hQUM5m40dyDxIJsW5TON7QqVYjjhCIjBUKbMFqmiM1xZ8ND5%2Buo5xd
 | crtKey | String | Y | 고객인증키(Console 페이지 내 있음) |
 | reqNo | Long | Y | 요청번호 |
 
-### 응답
+<a id="check-status-of-request-for-query-of-business-closurecessation-response"></a>
+### 응답 { #check-status-of-request-for-query-of-business-closurecessation-response }
 
 <details>
   <summary><strong>예시 코드</strong></summary>
@@ -192,17 +207,20 @@ TSNRsStai0hQUM5m40dyDxIJsW5TON7QqVYjjhCIjBUKbMFqmiM1xZ8ND5%2Buo5xd
 
 ---
 
-## 거래처 휴/폐업 요청 결과데이터 받기
+<a id="receive-result-of-request-for-query-of-business-closurecessation"></a>
+## 거래처 휴/폐업 요청 결과데이터 받기 { #receive-result-of-request-for-query-of-business-closurecessation }
 
 요청한 휴/폐업 정보 조회의 결과 데이터를 조회합니다.
 
-### 요청
+<a id="receive-result-of-request-for-query-of-business-closurecessation-request"></a>
+### 요청 { #receive-result-of-request-for-query-of-business-closurecessation-request }
 
 ```
 GET /scraping/v1.0/appkeys/{appkey}/results?p={param}
 ```
 
-### 요청 파라미터
+<a id="receive-result-of-request-for-query-of-business-closurecessation-request-parameters"></a>
+### 요청 파라미터 { #receive-result-of-request-for-query-of-business-closurecessation-request-parameters }
 
 <details>
   <summary><strong>예시 URL</strong></summary>
@@ -218,7 +236,8 @@ https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/1sdaf3rs34d2/re
 | appkey | URL | String | Y | AppKey |
 | p | URL | String | Y | 암호화된 Request body Parameter |
 
-### 요청 본문
+<a id="receive-result-of-request-for-query-of-business-closurecessation-request-body"></a>
+### 요청 본문 { #receive-result-of-request-for-query-of-business-closurecessation-request-body }
 
 <details>
   <summary><strong>예시 코드</strong></summary>
@@ -243,7 +262,8 @@ TSNRsStai0hQUM5m40dyDxIJsW5TON7QqVYjjhCIjBUKbMFqmiM1xZ8ND5%2Buo5xd
 | reqNo | Long | Y | 요청번호 |
 | scn | String [Y,N] | N | 거래처명 조회 플래그 |
 
-### 응답
+<a id="receive-result-of-request-for-query-of-business-closurecessation-response"></a>
+### 응답 { #receive-result-of-request-for-query-of-business-closurecessation-response }
 
 <details>
   <summary><strong>예시 코드</strong></summary>
@@ -308,17 +328,20 @@ resultEncrytData 해당 데이터의 URLDecoder 처리 후, AES256 복호화 처
 
 ---
 
-## 거래처 휴/폐업 최근 요청중인 요청번호 확인
+<a id="check-recent-request-number-for-query-of-business-closurecessation"></a>
+## 거래처 휴/폐업 최근 요청중인 요청번호 확인 { #check-recent-request-number-for-query-of-business-closurecessation }
 
 가장 최근에 요청한 휴/폐업 정보 조회의 요청번호를 확인합니다.
 
-### 요청
+<a id="check-recent-request-number-for-query-of-business-closurecessation-request"></a>
+### 요청 { #check-recent-request-number-for-query-of-business-closurecessation-request }
 
 ```
 GET /scraping/v1.0/appkeys/{appkey}/recent?p={param}
 ```
 
-### 요청 파라미터
+<a id="check-recent-request-number-for-query-of-business-closurecessation-request-parameters"></a>
+### 요청 파라미터 { #check-recent-request-number-for-query-of-business-closurecessation-request-parameters }
 
 <details>
   <summary><strong>예시 URL</strong></summary>
@@ -334,7 +357,8 @@ https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/1sdaf3rs34d2/re
 | appkey | URL | String | Y | AppKey |
 | p | URL | String | Y | 암호화된 Request body Parameter |
 
-### 요청 본문
+<a id="check-recent-request-number-for-query-of-business-closurecessation-request-body"></a>
+### 요청 본문 { #check-recent-request-number-for-query-of-business-closurecessation-request-body }
 
 <details>
   <summary><strong>예시 코드</strong></summary>
@@ -356,7 +380,8 @@ JSON 데이터를 AES256 암호화 처리 후, URLEncoder(UTF-8) 처리된 데�
 | custNo | Long | Y | 고객번호(Console 페이지 내 있음) |
 | crtKey | String | Y | 고객인증키(Console 페이지 내 있음) |
 
-### 응답
+<a id="check-recent-request-number-for-query-of-business-closurecessation-response"></a>
+### 응답 { #check-recent-request-number-for-query-of-business-closurecessation-response }
 
 <details>
   <summary><strong>예시 코드</strong></summary>
@@ -384,17 +409,20 @@ JSON 데이터를 AES256 암호화 처리 후, URLEncoder(UTF-8) 처리된 데�
 
 ---
 
-## 거래처 휴/폐업 최근 일주일내 요청내역 확인
+<a id="check-requests-of-recent-1-week-for-query-of-business-closurecessation"></a>
+## 거래처 휴/폐업 최근 일주일내 요청내역 확인 { #check-requests-of-recent-1-week-for-query-of-business-closurecessation }
 
 최근 일주일 내 휴/폐업 정보 조회 요청 내역 목록을 조회합니다.
 
-### 요청
+<a id="check-requests-of-recent-1-week-for-query-of-business-closurecessation-request"></a>
+### 요청 { #check-requests-of-recent-1-week-for-query-of-business-closurecessation-request }
 
 ```
 GET /scraping/v1.0/appkeys/{appkey}/reqlists?p={param}
 ```
 
-### 요청 파라미터
+<a id="check-requests-of-recent-1-week-for-query-of-business-closurecessation-request-parameters"></a>
+### 요청 파라미터 { #check-requests-of-recent-1-week-for-query-of-business-closurecessation-request-parameters }
 
 <details>
   <summary><strong>예시 URL</strong></summary>
@@ -410,7 +438,8 @@ https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/1sdaf3rs34d2/re
 | appkey | URL | String | Y | AppKey |
 | p | URL | String | Y | 암호화된 Request body Parameter |
 
-### 요청 본문
+<a id="check-requests-of-recent-1-week-for-query-of-business-closurecessation-request-body"></a>
+### 요청 본문 { #check-requests-of-recent-1-week-for-query-of-business-closurecessation-request-body }
 
 <details>
   <summary><strong>예시 코드</strong></summary>
@@ -432,7 +461,8 @@ JSON 데이터를 AES256 암호화 처리 후, URLEncoder(UTF-8) 처리된 데�
 | custNo | Long | Y | 고객번호(Console 페이지 내 있음) |
 | crtKey | String | Y | 고객인증키(Console 페이지 내 있음) |
 
-### 응답
+<a id="check-requests-of-recent-1-week-for-query-of-business-closurecessation-response"></a>
+### 응답 { #check-requests-of-recent-1-week-for-query-of-business-closurecessation-response }
 
 <details>
   <summary><strong>예시 코드</strong></summary>
@@ -477,9 +507,11 @@ JSON 데이터를 AES256 암호화 처리 후, URLEncoder(UTF-8) 처리된 데�
 
 ---
 
-## 참고사항
+<a id="references"></a>
+## 참고사항 { #references }
 
-### 결과조회코드표
+<a id="table-of-query-result-codes"></a>
+### 결과조회코드표 { #table-of-query-result-codes }
 
 | 코드값 | 결과값 |
 | --- | --- |
@@ -492,7 +524,8 @@ JSON 데이터를 AES256 암호화 처리 후, URLEncoder(UTF-8) 처리된 데�
 | 06 | 폐업자 |
 | 09 | 기타 |
 
-### AES 256 암호화
+<a id="aes-256-encryption"></a>
+### AES 256 암호화 { #aes-256-encryption }
 
 > 암호화모듈 개발시 CBC, 패딩은 PKCS5Padding 사용
 > [Example]

@@ -1,21 +1,17 @@
-<!-- pre-align:aligned sig=b078a615f7b7 -->
-
-<a id="upcoming-products-corporations-search-developers-guide"></a>
-## Upcoming Products > Corporations Search > Developer's Guide { #upcoming-products-corporations-search-developers-guide }
+## Upcoming Products > Corporations Search > Developer's Guide 
 
 > ※ 본 문서는 alpha 개발 단계의 문서입니다.
 > 사용에 관심이 있으신 분은 **support@cloud.toast.com**으로 문의해 주시기 바랍니다.
 
 다음과 같은 API 호출을 통해 거래처 휴/폐업조회 서비스를 이용할 수 있습니다.
 
-<a id="section-1"></a>
-## 거래처 휴/페업 요청 { #section-1 }
+## 거래처 휴/페업 요청
 
 [URL]
 
 ```
 POST   [Content-Type : application/x-www-form-urlencoded]
-https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/{appkey}/requests?p={param}
+https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/{appkey}/requests?p={param}
 ```
 
 [Path Parameter]
@@ -30,7 +26,7 @@ https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/{appkey}/reques
 |이름|	자료형|	설명|
 |---|---|---|
 |custNo|	long|	고객번호|
-|crtKey|	String|	고객인증키|
+|cryKey|	String|	고객인증키|
 |bnoList|	String|	사업자등록번호 (복수개가능)|
 
 [Example Request]
@@ -40,14 +36,14 @@ https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/{appkey}/reques
 ,"crtKey":"qaz!@wsx"
 ,"bnoList":["1234567890","0123456789","9012345678"]}
 
-Json데이터를 AES256 암호화 처리후, URLEncoder(UTF-8) 처리된 데이터
+Json데이터를 AES256 함호화 처리후, URLEncoder(UTF-8) 처리된 데이터
 rteo7fjjhGlVznybl239YSngEb2Y3VHOSJaM12AGasdyI1Y0pclSFnPo8uD8eHLFJ41AigDRpsXW36aBQoJXkTFhVeTQ4CMJFg8qKUXj%2Bl%2BwxjdkDJxVdCkJlh4Nnvxm
 ```
 
 [Example Request url]
 
 ```
-https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/1sdaf3rs34d2/requests?p= rteo7fjjhGlVznybl239YSngEb2Y3VHOSJaM12AGasdyI1Y0pclSFnPo8uD8eHLFJ41AigDRpsXW36aBQoJXkTFhVeTQ4CMJFg8qKUXj%2Bl%2BwxjdkDJxVdCkJlh4Nnvxm
+https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/1sdaf3rs34d2/requests?p= rteo7fjjhGlVznybl239YSngEb2Y3VHOSJaM12AGasdyI1Y0pclSFnPo8uD8eHLFJ41AigDRpsXW36aBQoJXkTFhVeTQ4CMJFg8qKUXj%2Bl%2BwxjdkDJxVdCkJlh4Nnvxm
 ```
 
 [Example Response]
@@ -75,14 +71,13 @@ https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/1sdaf3rs34d2/re
 |resultCnt|	int|	요청된 사업자등록번호 갯수|
 |reqDate|	String|	요청된 일시|
 
-<a id="section-2"></a>
-## 거래처 휴/페업 요청 상태확인 { #section-2 }
+## 거래처 휴/페업 요청 상태확인
 
 [URL]
 
 ```
 GET
-https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/{appkey}/verification?p={param}
+https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/{appkey}/verification?p={param}
 ```
 
 [Path Parameter]
@@ -97,7 +92,7 @@ https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/{appkey}/verifi
 |이름|	자료형|	설명|
 |---|---|---|
 |custNo|	long|	고객번호|
-|crtKey|	String|	고객인증키|
+|cryKey|	String|	고객인증키|
 |reqNo|	long|	요청번호|
 
 [Example Request]
@@ -107,14 +102,14 @@ https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/{appkey}/verifi
 ,"crtKey":"qaz!@wsx"
 ,"reqNo":58}
 
-Json데이터를 AES256 암호화 처리후, URLEncoder(UTF-8) 처리된 데이터
+Json데이터를 AES256 함호화 처리후, URLEncoder(UTF-8) 처리된 데이터
 TSNRsStai0hQUM5m40dyDxIJsW5TON7QqVYjjhCIjBUKbMFqmiM1xZ8ND5%2Buo5xd
 ```
 
 [Example Request url]
 
 ```
-https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/1sdaf3rs34d2/verification?p= TSNRsStai0hQUM5m40dyDxIJsW5TON7QqVYjjhCIjBUKbMFqmiM1xZ8ND5%2Buo5xd
+https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/1sdaf3rs34d2/verification?p= TSNRsStai0hQUM5m40dyDxIJsW5TON7QqVYjjhCIjBUKbMFqmiM1xZ8ND5%2Buo5xd
 ```
 
 [Example Response]
@@ -140,14 +135,13 @@ https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/1sdaf3rs34d2/ve
 |reqNo|	long|	요청번호|
 |resultDate|	String|	완료일시|
 
-<a id="section-3"></a>
-## 거래처 휴/페업 요청 결과데이터 받기 { #section-3 }
+## 거래처 휴/페업 요청 결과데이터 받기
 
 [URL]
 
 ```
 GET
-https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/{appkey}/results?p={param}
+https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/{appkey}/results?p={param}
 ```
 
 [Path Parameter]
@@ -162,7 +156,7 @@ https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/{appkey}/result
 |이름|	자료형|	설명|
 |---|---|---|
 |custNo|	long|	고객번호|
-|crtKey|	String|	고객인증키|
+|cryKey|	String|	고객인증키|
 |reqNo|	long|	요청번호|
 
 [Example Request]
@@ -172,14 +166,14 @@ https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/{appkey}/result
 ,"crtKey":"qaz!@wsx"
 ,"reqNo":58}
 
-Json데이터를 AES256 암호화 처리후, URLEncoder(UTF-8) 처리된 데이터
+Json데이터를 AES256 함호화 처리후, URLEncoder(UTF-8) 처리된 데이터
 TSNRsStai0hQUM5m40dyDxIJsW5TON7QqVYjjhCIjBUKbMFqmiM1xZ8ND5%2Buo5xd
 ```
 
 [Example Request url]
 
 ```
-https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/1sdaf3rs34d2/results?p= TSNRsStai0hQUM5m40dyDxIJsW5TON7QqVYjjhCIjBUKbMFqmiM1xZ8ND5%2Buo5xd
+https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/1sdaf3rs34d2/results?p= TSNRsStai0hQUM5m40dyDxIJsW5TON7QqVYjjhCIjBUKbMFqmiM1xZ8ND5%2Buo5xd
 ```
 
 [Example Response]
@@ -224,14 +218,13 @@ resultEncrytData 해당데이터의 URLDecoder 처리 후, AES256 복호화 처�
 |bnoCont|	String|	조회결과|
 |bnoDate|	String|	조회날자|
 
-<a id="section-4"></a>
-## 거래처 휴/페업 최근 요청중인 요청번호 확인 { #section-4 }
+## 거래처 휴/페업 최근 요청중인 요청번호 확인
 
 [URL]
 
 ```
 GET
-https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/{appkey}/recent?p={param}
+https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/{appkey}/recent?p={param}
 ```
 
 [Path Parameter]
@@ -246,7 +239,7 @@ https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/{appkey}/recent
 |이름|	자료형|	설명|
 |---|---|---|
 |custNo|	long|	고객번호|
-|crtKey|	String|	고객인증키|
+|cryKey|	String|	고객인증키|
 
 [Example Request]
 
@@ -254,14 +247,14 @@ https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/{appkey}/recent
 {"custNo":1
 ,"crtKey":"qaz!@wsx"}
 
-Json데이터를 AES256 암호화 처리후, URLEncoder(UTF-8) 처리된 데이터
+Json데이터를 AES256 함호화 처리후, URLEncoder(UTF-8) 처리된 데이터
 3Tm2TS3ynvXw3jcgh1SzQcMIBA2EIRp%2FheQSAsWSXHTP0TODL%2FYEL1Iml3Qn1CWn
 ```
 
 [Example Request url]
 
 ```
-https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/1sdaf3rs34d2/verification?p= 3Tm2TS3ynvXw3jcgh1SzQcMIBA2EIRp%2FheQSAsWSXHTP0TODL%2FYEL1Iml3Qn1CWn
+https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/1sdaf3rs34d2/verification?p= 3Tm2TS3ynvXw3jcgh1SzQcMIBA2EIRp%2FheQSAsWSXHTP0TODL%2FYEL1Iml3Qn1CWn
 ```
 
 [Example Response]
@@ -287,14 +280,13 @@ https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/1sdaf3rs34d2/ve
 |recentReqNo|	long|	최근요청번호|
 |recentReqDate|	String|	최근요청일시|
 
-<a id="section-5"></a>
-## 거래처 휴/페업 최근 일주일내 요청내역 확인 { #section-5 }
+## 거래처 휴/페업 최근 일주일내 요청내역 확인
 
 [URL]
 
 ```
 GET
-https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/{appkey}/reqlists?p={param}
+https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/{appkey}/reqlists?p={param}
 ```
 
 [Path Parameter]
@@ -309,7 +301,7 @@ https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/{appkey}/reqlis
 |이름|	자료형|	설명|
 |---|---|---|
 |custNo|	long|	고객번호|
-|crtKey|	String|	고객인증키|
+|cryKey|	String|	고객인증키|
 
 [Example Request]
 
@@ -317,14 +309,14 @@ https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/{appkey}/reqlis
 {"custNo":1
 ,"crtKey":"qaz!@wsx"}
 
-Json데이터를 AES256 암호화 처리후, URLEncoder(UTF-8) 처리된 데이터
+Json데이터를 AES256 함호화 처리후, URLEncoder(UTF-8) 처리된 데이터
 3Tm2TS3ynvXw3jcgh1SzQcMIBA2EIRp%2FheQSAsWSXHTP0TODL%2FYEL1Iml3Qn1CWn
 ```
 
 [Example Request url]
 
 ```
-https://api-corpsearch.nhncloudservice.com/scraping/v1.0/appkeys/1sdaf3rs34d2/reqlists?p= 3Tm2TS3ynvXw3jcgh1SzQcMIBA2EIRp%2FheQSAsWSXHTP0TODL%2FYEL1Iml3Qn1CWn
+https://api-toastbill.cloud.toast.com/scraping/v1.0/appkeys/1sdaf3rs34d2/reqlists?p= 3Tm2TS3ynvXw3jcgh1SzQcMIBA2EIRp%2FheQSAsWSXHTP0TODL%2FYEL1Iml3Qn1CWn
 ```
 
 [Example Response]
